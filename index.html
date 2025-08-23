@@ -4,7 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Flexi Dev Studio</title>
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
   <style>
     * { box-sizing: border-box; }
     body {
@@ -13,23 +17,22 @@
       background: #fdfdfd;
       color: #333;
     }
+    /* Splash */
     .splash-screen {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
       background: #000;
       display: flex;
       justify-content: center;
       align-items: center;
       z-index: 9999;
-      animation: fadeOut 2s ease-out 2.5s forwards;
+      animation: fadeOut 1.5s ease-out 2s forwards;
     }
     .splash-screen h1 {
       color: #fff;
-      font-size: 3rem;
-      animation: slideUp 2s ease-out;
+      font-size: 2rem;
+      animation: slideUp 1.2s ease-out;
     }
     @keyframes slideUp {
       0% { transform: translateY(100px); opacity: 0; }
@@ -38,67 +41,75 @@
     @keyframes fadeOut {
       to { opacity: 0; visibility: hidden; }
     }
+
     header {
       background: #000;
       color: white;
-      padding: 2rem;
+      padding: 1.5rem;
       text-align: center;
     }
-    header h1 { margin: 0; font-size: 2.5rem; }
-    header p { margin: 0.5rem 0 0; font-size: 1.1rem; }
+    header h1 { margin: 0; font-size: 2rem; }
+    header p { margin: 0.5rem 0 0; font-size: 1rem; }
+
     section {
-      padding: 2rem;
+      padding: 1.5rem;
       max-width: 900px;
       margin: auto;
     }
     h2 {
       color: #000;
-      font-size: 1.8rem;
+      font-size: 1.5rem;
       margin-bottom: 1rem;
     }
+
     .services, .portfolio {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1.5rem;
+      grid-template-columns: 1fr;
+      gap: 1rem;
     }
+    /* switch to 2-column grid only on tablets+ */
+    @media(min-width: 700px){
+      .services, .portfolio { grid-template-columns: 1fr 1fr; }
+    }
+
     .card {
       background: #fff;
-      padding: 1.5rem;
+      padding: 1.2rem;
       border-radius: 1rem;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     .card a {
       display: inline-block;
-      margin-top: 1rem;
+      margin-top: 0.75rem;
       color: #007bff;
       text-decoration: none;
       font-weight: bold;
     }
-    .card a:hover {
-      text-decoration: underline;
-    }
+    .card a:hover { text-decoration: underline; }
+
     .contact {
       text-align: center;
       background: #000;
       color: #fff;
-      padding: 2rem;
+      padding: 2rem 1rem;
       border-radius: 1rem;
     }
     .contact a {
       display: inline-block;
-      margin: 0.5rem;
-      padding: 0.75rem 1.5rem;
+      margin: 0.4rem;
+      padding: 0.75rem 1.2rem;
       background: #fff;
       color: #000;
       border-radius: 30px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 0.9rem;
     }
-/* floating socials (simple) */
+
+    /* Floating socials */
     .socials{
       position:fixed;
-      right:18px;
-      bottom:18px;
+      right:18px; bottom:18px;
       display:flex;
       flex-direction:column;
       gap:12px;
@@ -107,20 +118,23 @@
     .socials a{
       display:inline-grid;
       place-items:center;
-      width:50px;height:50px;
+      width:44px; height:44px;
       border-radius:999px;
       text-decoration:none;
       color:white;
-      font-size:18px;
-      background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border:1px solid rgba(255,255,255,0.06);
+      font-size:20px;
+      background:#000;
       transition: transform .15s ease, box-shadow .15s ease;
     }
-    .socials a:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.45); }
+    .socials a:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.45);
+    }
+
     footer {
       text-align: center;
       padding: 1rem;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
   </style>
 </head>
@@ -160,71 +174,49 @@
     </div>
   </section>
 
-
   <section>
-<h2>Portfolio</h2>
-<article class="card" role="listitem" aria-label="Filipe Studio project">
-          <h3>Filipe Studio 🎵</h3>
-          <p>Music portfolio with visual wave, playlist player and genre filters.</p>
-          <a class="btn" href="https://flexi8.github.io/Filipe-Studio/" target="_blank" rel="noopener">Visit Site</a>
-        </article>
-
-        <article class="card" role="listitem" aria-label="Yetbi Chin-Chin project">
-          <h3>Yetbi Chin-Chin 🍪</h3>
-          <p>Product gallery & ordering micro-site; playful UI for food brands.</p>
-          <a class="btn" href="https://flexi8.github.io/Yetbi-Chin_chin/" target="_blank" rel="noopener">Visit Site</a>
-        </article>
-
-        <article class="card" role="listitem" aria-label="Luxe Bites AI project">
-          <h3>Luxe Bites AI 🤖</h3>
-          <p>Recipe finder that suggests bakes from ingredients you have.</p>
-          <a class="btn" href="https://flexi-spec.github.io/Luxe-Bites-AI/" target="_blank" rel="noopener">Visit Site</a>
-        </article>
-
-        <article class="card" role="listitem" aria-label="Flexi AI Labs project">
-          <h3>Flexi AI Labs 🧠</h3>
-          <p>AI experiments & services showcase; demos and utilities.</p>
-          <a class="btn" href="https://flexi8.github.io/flexi_ai_website/" target="_blank" rel="noopener">Visit Site</a>
-        </article>
-
-        <article class="card" role="listitem" aria-label="Pizza Lounge project">
-          <h3>Flexi’s Pizza Lounge 🍕</h3>
-          <p>Faith-themed cookbook UI with creative pizza names and recipes.</p>
-          <a class="btn" href="https://flexi8.github.io/Flexi-s-Pizza-Lounge-/" target="_blank" rel="noopener">Visit Site</a>
-        </article>
-
-        <article class="card" role="listitem" aria-label="Hearts Set Apart project">
-          <h3>Hearts Set Apart ♥️</h3>
-          <p>Verse of the day, Bible search and devotional sharing tools.</p>
-          <a class="btn" href="https://flexi-spec.github.io/Hearts-Set-Apart-/" target="_blank" rel="noopener">Visit Site</a>
-        </article>
-
-        <article class="card" role="listitem" aria-label="One Hour With God project">
-          <h3>One Hour With God 🕊️</h3>
-          <p>Guided prayer hour with timers, piano ambience and reminders.</p>
-          <a class="btn" href="https://flexi-spec.github.io/One-Hour-With-God-/" target="_blank" rel="noopener">Visit Site</a>
-        </article>
-    
-    <div class="portfolio">
-      <div class="card">
-        <h3>Flexi AI Website</h3>
-        <p>AI-powered assistant site for Flexi AI Labs.</p>
-        <a href="https://flexi8.github.io/flexi_ai_website/" target="_blank">Visit Site</a>
-      </div>
-      <div class="card">
-        <h3>Luze Bites</h3>
-        <p>Bakery website with recipes, admin uploads, and animations.</p>
-        <a href="https://flexi8.github.io/luze-bites/" target="_blank">Private Side</a>
-      </div>
-      <div class="card">
-        <h3>St. Matthew’s Church</h3>
+    <h2>Portfolio</h2>
+    <div role="list" class="portfolio">
+      <article class="card" role="listitem">
+        <h3>Filipe Studio 🎵</h3>
+        <p>Music portfolio with visual wave, playlist player and genre filters.</p>
+        <a href="https://flexi8.github.io/Filipe-Studio/" target="_blank" rel="noopener">Visit Site</a>
+      </article>
+      <article class="card" role="listitem">
+        <h3>Yetbi Chin-Chin 🍪</h3>
+        <p>Product gallery & ordering micro-site; playful UI for food brands.</p>
+        <a href="https://flexi8.github.io/Yetbi-Chin_chin/" target="_blank" rel="noopener">Visit Site</a>
+      </article>
+      <article class="card" role="listitem">
+        <h3>Luxe Bites AI 🤖</h3>
+        <p>Recipe finder that suggests bakes from ingredients you have.</p>
+        <a href="https://flexi-spec.github.io/Luxe-Bites-AI/" target="_blank" rel="noopener">Visit Site</a>
+      </article>
+      <article class="card" role="listitem">
+        <h3>Flexi AI Labs 🧠</h3>
+        <p>AI experiments & services showcase; demos and utilities.</p>
+        <a href="https://flexi8.github.io/flexi_ai_website/" target="_blank" rel="noopener">Visit Site</a>
+      </article>
+      <article class="card" role="listitem">
+        <h3>Flexi’s Pizza Lounge 🍕</h3>
+        <p>Faith-themed cookbook UI with creative pizza names and recipes.</p>
+        <a href="https://flexi8.github.io/Flexi-s-Pizza-Lounge-/" target="_blank" rel="noopener">Visit Site</a>
+      </article>
+      <article class="card" role="listitem">
+        <h3>Hearts Set Apart ♥️</h3>
+        <p>Verse of the day, Bible search and devotional sharing tools.</p>
+        <a href="https://flexi-spec.github.io/Hearts-Set-Apart-/" target="_blank" rel="noopener">Visit Site</a>
+      </article>
+      <article class="card" role="listitem">
+        <h3>One Hour With God 🕊️</h3>
+        <p>Guided prayer hour with timers, piano ambience and reminders.</p>
+        <a href="https://flexi-spec.github.io/One-Hour-With-God-/" target="_blank" rel="noopener">Visit Site</a>
+      </article>
+      <article class="card" role="listitem">
+        <h3>St. Matthew’s Church ⛪</h3>
         <p>Online church platform with announcements, sermon pages, and giving options.</p>
-        <a href="https://flexi8.github.io/st-matthew-anglican/" target="_blank">Visit Site</a>
-      </div>
-      <div class="card">
-        <h3>More Coming Soon...</h3>
-        <p>We build fast, beautiful websites like these for all industries.</p>
-      </div>
+        <a href="https://flexi8.github.io/st-matthew-anglican/" target="_blank" rel="noopener">Visit Site</a>
+      </article>
     </div>
   </section>
 
@@ -236,16 +228,16 @@
     <a href="https://instagram.com/flexidevstudio">Visit Instagram</a>
   </section>
 
-<!-- floating socials -->
-  <div class="socials" aria-hidden="false">
-    <a class="whatsapp" href="https://wa.me/2347071341687" target="_blank" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-    <a class="mail" href="mailto:devflexi20@gmail.com" title="Email"><i class="bi bi-envelope-fill"></i></a>
-    <a class="insta" href="https://www.instagram.com/flexidevstudio" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
-    <a class="yt" href="https://youtube.com/@flexidev-o5o" target="_blank" title="YouTube"><i class="bi bi-youtube"></i></a>
+  <!-- Floating socials -->
+  <div class="socials">
+    <a href="https://wa.me/2347071341687" target="_blank" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+    <a href="mailto:devflexi20@gmail.com" title="Email"><i class="bi bi-envelope-fill"></i></a>
+    <a href="https://www.instagram.com/flexidevstudio" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+    <a href="https://youtube.com/@flexidev-o5o" target="_blank" title="YouTube"><i class="bi bi-youtube"></i></a>
   </div>
 
   <footer>
     &copy; 2025 Flexi Dev Studio. All rights reserved.
   </footer>
 </body>
-</html>
+        </html>
