@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flexi Dev Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #fdfdfd;
+      color: #333;
+    }
+    .splash-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      animation: fadeOut 2s ease-out 2.5s forwards;
+    }
+    .splash-screen h1 {
+      color: #fff;
+      font-size: 3rem;
+      animation: slideUp 2s ease-out;
+    }
+    @keyframes slideUp {
+      0% { transform: translateY(100px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeOut {
+      to { opacity: 0; visibility: hidden; }
+    }
+    header {
+      background: #000;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 { margin: 0; font-size: 2.5rem; }
+    header p { margin: 0.5rem 0 0; font-size: 1.1rem; }
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #000;
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+    .services, .portfolio {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+    .card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 1rem;
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .card a:hover {
+      text-decoration: underline;
+    }
+    .contact {
+      text-align: center;
+      background: #000;
+      color: #fff;
+      padding: 2rem;
+      border-radius: 1rem;
+    }
+    .contact a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.75rem 1.5rem;
+      background: #fff;
+      color: #000;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+/* floating socials (simple) */
+    .socials{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      z-index:999;
+    }
+    .socials a{
+      display:inline-grid;
+      place-items:center;
+      width:50px;height:50px;
+      border-radius:999px;
+      text-decoration:none;
+      color:white;
+      font-size:18px;
+      background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border:1px solid rgba(255,255,255,0.06);
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .socials a:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.45); }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="splash-screen">
+    <h1>Welcome to Flexi Dev Studio</h1>
+  </div>
+
+  <header>
+    <h1>Flexi Dev Studio</h1>
+    <p>Websites for Businesses; Fast, Affordable & Custom</p>
+  </header>
+
+  <section>
+    <h2>Services</h2>
+    <div class="services">
+      <div class="card">
+        <h3>Starter Website</h3>
+        <p>Basic 4-page website for businesses. Mobile-friendly and fast.</p>
+        <strong>From $200</strong>
+      </div>
+      <div class="card">
+        <h3>Business Pro</h3>
+        <p>Includes booking, WhatsApp chat, SEO, Google Maps, and analytics.</p>
+        <strong>From $400</strong>
+      </div>
+      <div class="card">
+        <h3>eCommerce Boss</h3>
+        <p>Full online shop with payments, product upload, and cart system.</p>
+        <strong>From $800</strong>
+      </div>
+      <div class="card">
+        <h3>Monthly Maintenance</h3>
+        <p>Updates, backups, blog posts, and support.</p>
+        <strong>From $30/month</strong>
+      </div>
+    </div>
+  </section>
+
+
+  <section>
+<h2>Portfolio</h2>
+<article class="card" role="listitem" aria-label="Filipe Studio project">
+          <h3>Filipe Studio 🎵</h3>
+          <p>Music portfolio with visual wave, playlist player and genre filters.</p>
+          <a class="btn" href="https://flexi8.github.io/Filipe-Studio/" target="_blank" rel="noopener">Visit Site</a>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Yetbi Chin-Chin project">
+          <h3>Yetbi Chin-Chin 🍪</h3>
+          <p>Product gallery & ordering micro-site; playful UI for food brands.</p>
+          <a class="btn" href="https://flexi8.github.io/Yetbi-Chin_chin/" target="_blank" rel="noopener">Visit Site</a>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Luxe Bites AI project">
+          <h3>Luxe Bites AI 🤖</h3>
+          <p>Recipe finder that suggests bakes from ingredients you have.</p>
+          <a class="btn" href="https://flexi-spec.github.io/Luxe-Bites-AI/" target="_blank" rel="noopener">Visit Site</a>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Flexi AI Labs project">
+          <h3>Flexi AI Labs 🧠</h3>
+          <p>AI experiments & services showcase; demos and utilities.</p>
+          <a class="btn" href="https://flexi8.github.io/flexi_ai_website/" target="_blank" rel="noopener">Visit Site</a>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Pizza Lounge project">
+          <h3>Flexi’s Pizza Lounge 🍕</h3>
+          <p>Faith-themed cookbook UI with creative pizza names and recipes.</p>
+          <a class="btn" href="https://flexi8.github.io/Flexi-s-Pizza-Lounge-/" target="_blank" rel="noopener">Visit Site</a>
+        </article>
+
+        <article class="card" role="listitem" aria-label="Hearts Set Apart project">
+          <h3>Hearts Set Apart ♥️</h3>
+          <p>Verse of the day, Bible search and devotional sharing tools.</p>
+          <a class="btn" href="https://flexi-spec.github.io/Hearts-Set-Apart-/" target="_blank" rel="noopener">Visit Site</a>
+        </article>
+
+        <article class="card" role="listitem" aria-label="One Hour With God project">
+          <h3>One Hour With God 🕊️</h3>
+          <p>Guided prayer hour with timers, piano ambience and reminders.</p>
+          <a class="btn" href="https://flexi-spec.github.io/One-Hour-With-God-/" target="_blank" rel="noopener">Visit Site</a>
+        </article>
+    
+    <div class="portfolio">
+      <div class="card">
+        <h3>Flexi AI Website</h3>
+        <p>AI-powered assistant site for Flexi AI Labs.</p>
+        <a href="https://flexi8.github.io/flexi_ai_website/" target="_blank">Visit Site</a>
+      </div>
+      <div class="card">
+        <h3>Luze Bites</h3>
+        <p>Bakery website with recipes, admin uploads, and animations.</p>
+        <a href="https://flexi8.github.io/luze-bites/" target="_blank">Private Side</a>
+      </div>
+      <div class="card">
+        <h3>St. Matthew’s Church</h3>
+        <p>Online church platform with announcements, sermon pages, and giving options.</p>
+        <a href="https://flexi8.github.io/st-matthew-anglican/" target="_blank">Visit Site</a>
+      </div>
+      <div class="card">
+        <h3>More Coming Soon...</h3>
+        <p>We build fast, beautiful websites like these for all industries.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Ready to Get Started?</h2>
+    <p>Message me and let’s build your dream website!</p>
+    <a href="mailto:devflexi20@gmail.com">Email Me</a>
+    <a href="https://wa.me/2347071341687">Chat on WhatsApp</a>
+    <a href="https://instagram.com/flexidevstudio">Visit Instagram</a>
+  </section>
+
+<!-- floating socials -->
+  <div class="socials" aria-hidden="false">
+    <a class="whatsapp" href="https://wa.me/2347071341687" target="_blank" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+    <a class="mail" href="mailto:devflexi20@gmail.com" title="Email"><i class="bi bi-envelope-fill"></i></a>
+    <a class="insta" href="https://www.instagram.com/flexidevstudio" target="_blank" title="Instagram"><i class="bi bi-instagram"></i></a>
+    <a class="yt" href="https://youtube.com/@flexidev-o5o" target="_blank" title="YouTube"><i class="bi bi-youtube"></i></a>
+  </div>
+
+  <footer>
+    &copy; 2025 Flexi Dev Studio. All rights reserved.
+  </footer>
+</body>
+</html>
