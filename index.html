@@ -1,1 +1,537 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Flexi Dev Studio; Turning Your Ideas Into Digital Reality</title>
 
+  <!-- Google Search Console verification (preserved) -->
+  <meta name="google-site-verification" content="2x54o0V00dcQt3FDWD7-9DdAOcox-ZKqjMoxSJ9JgpU" />
+
+  <meta name="description" content="Flexi Dev Studio builds fast, affordable and custom websites and AI tools. Portfolio: food, faith, tools, AI projects." />
+  <meta name="keywords" content="Flexi Dev Studio, web developer, portfolio, AI, food recipes, gospel apps, Nigerian dev" />
+  <meta name="author" content="Flexi Dev Studio" />
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+  <style>
+    :root{
+      --white: #ffffff;
+      --bg: #f6f9ff;
+      --royal: #0b59a6;        /* primary royal blue */
+      --royal-2: #093f7a;      /* darker */
+      --muted: #6d7380;
+      --accent: #0b59a6;
+      --glass: rgba(255,255,255,0.85);
+      --card-shadow: 0 10px 30px rgba(15,38,80,0.06);
+      --radius: 14px;
+      --max-width: 1200px;
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background: var(--bg);
+      color:#0b1730;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+    }
+
+    /* SPLASH */
+    .splash {
+      position:fixed; inset:0;
+      display:flex; align-items:center; justify-content:center;
+      background:var(--royal);
+      color:var(--white); z-index:9999;
+      animation: splashHide 1s ease-out 1.6s forwards;
+    }
+    .splash .logo { text-align:center }
+    .splash .logo h1 { margin:0; font-size:1.25rem; letter-spacing:0.3px }
+    @keyframes splashHide {
+      to { opacity:0; visibility:hidden; transform:translateY(-6px); pointer-events:none; }
+    }
+
+    /* LAYOUT */
+    header.navbar {
+      position:fixed; top:0; left:0; right:0;
+      background: rgba(255,255,255,0.85);
+      box-shadow: 0 6px 20px rgba(16,40,80,0.06);
+      color:var(--royal-2);
+      padding:12px 20px;
+      z-index:1100;
+      display:flex; align-items:center; gap:18px;
+      backdrop-filter: blur(6px);
+    }
+    .nav-brand { font-weight:700; letter-spacing:0.2px; font-size:1.05rem; display:flex; align-items:center; gap:10px }
+    .nav-brand .dot { width:10px;height:10px;border-radius:50%; background:var(--royal); box-shadow:0 6px 18px rgba(11,89,166,0.14) }
+
+    nav.nav-links { margin-left:auto; display:flex; gap:12px; align-items:center; }
+    nav.nav-links a {
+      color:var(--royal-2); text-decoration:none; font-size:0.95rem;
+      padding:8px 10px; border-radius:8px; transition:background .18s ease, transform .12s ease;
+    }
+    nav.nav-links a:hover{ background: rgba(11,89,166,0.06); transform:translateY(-3px) }
+
+    /* HERO */
+    .hero {
+      position:relative;
+      height:100vh;
+      display:flex; align-items:center; justify-content:center;
+      overflow:hidden;
+      color:var(--white);
+    }
+    .hero__bg {
+      position:absolute; inset:0;
+      background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop&ixlib=rb-4.0.3&s=');
+      background-size:cover; background-position:center center;
+      filter: contrast(0.95) saturate(0.9) brightness(0.7);
+      z-index:0;
+    }
+    .hero__overlay {
+      position:absolute; inset:0;
+      background: linear-gradient(120deg, rgba(11,89,166,0.7), rgba(9,63,122,0.5));
+      z-index:1;
+    }
+    .hero-inner {
+      position:relative; z-index:2;
+      width:100%; max-width:var(--max-width); padding:28px; display:flex; gap:24px; align-items:center; justify-content:space-between;
+    }
+    .hero-copy { max-width:720px; animation: fadeInUp .9s ease both; }
+    .hero-copy h1 {
+      margin:0 0 10px 0;
+      font-size: clamp(1.8rem, 4.5vw, 3.4rem);
+      line-height:1.02;
+      font-weight:700;
+      color:var(--white);
+    }
+    .hero-copy p { margin:0 0 16px 0; color:rgba(255,255,255,0.92); font-size:1.05rem }
+    .cta-row { display:flex; gap:12px; align-items:center; flex-wrap:wrap }
+    .btn {
+      display:inline-block; padding:12px 16px; border-radius:12px; text-decoration:none; font-weight:600;
+      transition: transform .14s ease, box-shadow .14s ease;
+    }
+    .btn-primary {
+      background: var(--white); color:var(--royal-2);
+      box-shadow: 0 10px 30px rgba(11,89,166,0.12);
+    }
+    .btn-ghost {
+      background: transparent; color:var(--white); border:1px solid rgba(255,255,255,0.12);
+    }
+    .btn:hover { transform: translateY(-4px) }
+
+    .hero-meta { text-align:right; color:rgba(255,255,255,0.92); font-weight:600; }
+
+    main { padding-top:92px; } /* offset for fixed nav */
+    .wrap {
+      max-width:var(--max-width); margin:0 auto; padding:28px; display:grid; grid-template-columns: 280px 1fr; gap:26px;
+      align-items:start;
+    }
+
+    /* Sidebar (collapsible on small screens) */
+    .sidebar {
+      position:sticky; top:100px;
+      background:var(--white); padding:16px; border-radius:12px; box-shadow:var(--card-shadow);
+      height:max-content;
+    }
+    .filter-head { display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:10px; }
+    .filter-head h3 { margin:0; font-size:1rem; color:var(--royal-2) }
+    .filter-group { margin-bottom:12px }
+    .filter-group label { display:block; margin-bottom:6px; font-size:0.9rem; color:var(--muted) }
+    .chips { display:flex; flex-wrap:wrap; gap:8px }
+    .chip {
+      border:1px solid rgba(11,89,166,0.08); padding:8px 10px; border-radius:999px; cursor:pointer; background:transparent; color:var(--royal-2);
+      font-weight:600; font-size:0.9rem;
+    }
+    .chip.active { background: linear-gradient(90deg, rgba(11,89,166,0.1), rgba(11,89,166,0.06)); box-shadow: 0 6px 18px rgba(11,89,166,0.06) }
+
+    /* Grid content */
+    .content {
+      background:transparent;
+      min-height: 200px;
+    }
+    .controls {
+      display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:18px;
+    }
+    .search {
+      display:flex; gap:8px; align-items:center; background:var(--white); padding:8px 12px; border-radius:10px; box-shadow:var(--card-shadow);
+      border:1px solid rgba(11,89,166,0.04);
+    }
+    .search input{ border:0; outline:0; font-size:0.95rem; background:transparent; width:260px }
+    .grid {
+      display:grid; gap:18px;
+      grid-template-columns: 1fr;
+    }
+    @media(min-width:880px){ .grid { grid-template-columns: repeat(2, 1fr) } }
+    @media(min-width:1200px){ .grid { grid-template-columns: repeat(3, 1fr) } }
+
+    .card {
+      background:var(--white); padding:18px; border-radius:12px; box-shadow:var(--card-shadow);
+      transition: transform .18s ease, box-shadow .18s ease;
+      display:flex; flex-direction:column; gap:10px;
+    }
+    .card:hover { transform:translateY(-8px); box-shadow: 0 20px 50px rgba(11,89,166,0.08) }
+    .card h3 { margin:0; color:var(--royal-2) }
+    .card p { margin:0; color:var(--muted); font-size:0.95rem }
+    .card .meta { font-size:0.85rem; color:var(--muted); margin-top:6px }
+
+    /* contact */
+    .contact-card {
+      background: linear-gradient(180deg, rgba(11,89,166,0.06), rgba(11,89,166,0.03));
+      padding:16px; border-radius:12px; display:flex; justify-content:space-between; align-items:center;
+      border:1px solid rgba(11,89,166,0.06);
+    }
+
+    footer { text-align:center; padding:36px 20px; color:var(--muted); font-size:0.95rem; margin-top:40px }
+
+    /* mobile */
+    @media(max-width:980px){
+      .wrap{ grid-template-columns: 1fr; padding:18px }
+      .sidebar { position:relative; top:0; margin-bottom:14px }
+      .search input { width:140px }
+      nav.nav-links{ display:none }
+    }
+
+    /* fade in */
+    @keyframes fadeInUp { 0% { opacity:0; transform:translateY(14px) } 100% { opacity:1; transform:none } }
+    .fade { animation: fadeInUp .65s ease both; }
+
+    /* sidebar toggle button */
+    .filter-toggle {
+      display:inline-grid; place-items:center; width:44px; height:44px; border-radius:10px; background:var(--white);
+      box-shadow:var(--card-shadow); border:1px solid rgba(11,89,166,0.06); cursor:pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- SPLASH -->
+  <div class="splash" role="status" aria-label="Loading">
+    <div class="logo">
+      <h1 style="margin:0;display:flex;gap:10px;align-items:center;justify-content:center">
+        <span style="width:12px;height:12px;border-radius:50%;background:var(--white);display:inline-block"></span>
+        Flexi Dev Studio
+      </h1>
+      <div style="margin-top:8px;opacity:0.9"> Loading portfolio…</div>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <header class="navbar" role="navigation" aria-label="Main">
+    <div class="nav-brand" aria-hidden="true">
+      <span class="dot"></span> Flexi Dev Studio
+    </div>
+
+    <nav class="nav-links" aria-label="Site">
+      <a href="#food">Food</a>
+      <a href="#faith">Faith</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#tools">Tools</a>
+      <a href="#ai">AI</a>
+      <a href="#contact" class="btn btn-primary" style="padding:8px 12px">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" aria-label="Hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__overlay" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <h1>✨ Flexi Dev Studio; Turning Your Ideas Into Digital Reality</h1>
+        <p>Building future-ready websites, AI tools, and delightful digital experiences for creators, churches, and small businesses.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#contact">Contact Me</a>
+          <a class="btn btn-ghost" href="#portfolio">View Projects</a>
+        </div>
+        <div style="margin-top:14px;color:rgba(255,255,255,0.95)">
+          <strong style="background:rgba(255,255,255,0.92);padding:6px 8px;border-radius:8px;color:var(--royal-2)">Available for freelance</strong>
+          <span style="margin-left:10px">• devflexi20@gmail.com</span>
+        </div>
+      </div>
+
+      <div class="hero-meta fade" aria-hidden="true">
+        <div style="font-weight:700;font-size:1.05rem">Flexi Dev Studio: Web & AI</div>
+        <div style="margin-top:8px;color:rgba(255,255,255,0.9)">Worldwide • WhatsApp: +234 707 134 1687</div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <div class="wrap">
+
+      <!-- SIDEBAR (collapsible on small screens) -->
+      <aside class="sidebar" id="sidebar">
+        <div class="filter-head">
+          <h3>Filters</h3>
+          <button id="closeSidebar" class="filter-toggle" title="Close filters" aria-label="Close filters" style="display:none">
+            <i class="bi bi-x-lg" style="color:var(--royal-2);font-size:18px"></i>
+          </button>
+        </div>
+
+        <div class="filter-group">
+          <label>Search</label>
+          <div style="display:flex; gap:8px; align-items:center">
+            <input id="miniSearch" type="search" placeholder="Search projects..." style="width:100%; padding:10px;border-radius:10px;border:1px solid rgba(11,89,166,0.06)" />
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <label>Category</label>
+          <div class="chips" id="categoryChips">
+            <button class="chip active" data-filter-category="all">All</button>
+            <button class="chip" data-filter-category="food">Food</button>
+            <button class="chip" data-filter-category="faith">Faith</button>
+            <button class="chip" data-filter-category="portfolio">Portfolio</button>
+            <button class="chip" data-filter-category="tools">Tools</button>
+            <button class="chip" data-filter-category="ai">AI</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <label>Type</label>
+          <div class="chips" id="typeChips">
+            <button class="chip active" data-filter-type="all">All</button>
+            <button class="chip" data-filter-type="recipe">Recipe</button>
+            <button class="chip" data-filter-type="app">App</button>
+            <button class="chip" data-filter-type="studio">Studio</button>
+            <button class="chip" data-filter-type="converter">Converter</button>
+            <button class="chip" data-filter-type="promo">Promo</button>
+            <button class="chip" data-filter-type="church">Church</button>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- CONTENT -->
+      <section class="content" aria-live="polite">
+        <div class="controls">
+          <div class="search">
+            <i class="bi bi-search" style="opacity:0.6"></i>
+            <input id="searchInput" placeholder="Search projects by name or description..." />
+          </div>
+
+          <div style="display:flex; gap:10px; align-items:center">
+            <button id="openFilters" class="filter-toggle" title="Filters" aria-label="Open filters">
+              <i class="bi bi-filter" style="color:var(--royal-2);font-size:18px"></i>
+            </button>
+            <div style="color:var(--muted); font-weight:600">Showing <span id="count">0</span> projects</div>
+          </div>
+        </div>
+
+        <div class="grid" id="projectsGrid">
+
+          <!-- Project cards - keep order and content from your list; data attributes for filtering -->
+          <article class="card fade" data-category="food" data-type="recipe" data-title="Flexi’s Pizza Lounge">
+            <h3>Flexi’s Pizza Lounge 🍕</h3>
+            <p>Creative, faith-themed pizza recipes (Kairos Supreme, Slice of Purpose) with step-by-step guides.</p>
+            <div class="meta">Food • Recipe</div>
+            <div style="margin-top:10px"><a href="https://flexi8.github.io/Flexi-s-Pizza-Lounge-/" target="_blank" rel="noopener">Visit Site</a></div>
+          </article>
+
+          <article class="card fade" data-category="food" data-type="app" data-title="Custom Pizza App">
+            <h3>Custom Pizza App 🍕</h3>
+            <p>Build your pizza, share & download recipes as PDF.</p>
+            <div class="meta">Food • App</div>
+            <div style="margin-top:10px"><a href="https://flexi-spec.github.io/Custom-Pizza-App/" target="_blank" rel="noopener">Visit Site</a></div>
+          </article>
+
+          <article class="card fade" data-category="food" data-type="recipe" data-title="Yetbi Chin-Chin">
+            <h3>Yetbi Chin-Chin 🍬</h3>
+            <p>Classic Nigerian snack showcase with visuals & ingredients.</p>
+            <div class="meta">Food • Recipe</div>
+            <div style="margin-top:10px"><a href="https://flexi8.github.io/Yetbi-Chin_chin/" target="_blank" rel="noopener">Visit Site</a></div>
+          </article>
+
+          <article class="card fade" data-category="food" data-type="recipe" data-title="Boiled Icing Ice Cream">
+            <h3>Boiled Icing Ice Cream 🍨</h3>
+            <p>Boiled icing ice cream recipe page with pro tips.</p>
+            <div class="meta">Food • Recipe</div>
+            <div style="margin-top:10px"><a href="https://flexi-spec.github.io/-Flexi-s-Boiled-Icing-Ice-Cream-/" target="_blank" rel="noopener">Visit Site</a></div>
+          </article>
+
+          <article class="card fade" data-category="faith" data-type="app" data-title="One Hour With God">
+            <h3>One Hour With God 🕊️</h3>
+            <p>Guided prayer hour with timers, piano ambience and reminders.</p>
+            <div class="meta">Faith • App</div>
+            <div style="margin-top:10px"><a href="https://flexi-spec.github.io/One-Hour-With-God-/" target="_blank" rel="noopener">Visit Site</a></div>
+          </article>
+
+          <article class="card fade" data-category="faith" data-type="app" data-title="Hearts Set Apart">
+            <h3>Hearts Set Apart ❤️‍🔥</h3>
+            <p>Verse of the day, Bible search & shareable devotionals.</p>
+            <div class="meta">Faith • App</div>
+            <div style="margin-top:10px"><a href="https://flexi-spec.github.io/Hearts-Set-Apart-/" target="_blank" rel="noopener">Visit Site</a></div>
+          </article>
+
+          <article class="card fade" data-category="faith" data-type="church" data-title="St. Matthew’s Church">
+            <h3>St. Matthew’s Church ⛪</h3>
+            <p>Online church platform with announcements, sermons and giving tools.</p>
+            <div class="meta">Faith • Church</div>
+            <div style="margin-top:10px"><a href="https://flexi8.github.io/st-matthew-anglican/" target="_blank" rel="noopener">Visit Site</a></div>
+          </article>
+
+          <article class="card fade" data-category="portfolio" data-type="promo" data-title="Flexi Promo Page">
+            <h3>Flexi Promo Page 📽️</h3>
+            <p>Brand promo videos with captions and contact buttons for social sharing.</p>
+            <div class="meta">Portfolio • Promo</div>
+            <div style="margin-top:10px"><a href="https://flexi-spec.github.io/Flexi_Promo/" target="_blank" rel="noopener">Visit Site</a></div>
+          </article>
+
+          <article class="card fade" data-category="portfolio" data-type="studio" data-title="Flexi Dev Portfolio">
+            <h3>Flexi Dev Portfolio 📱</h3>
+            <p>Developer portfolio showing projects, skills and brand identity.</p>
+            <div class="meta">Portfolio • Studio</div>
+            <div style="margin-top:10px"><a href="https://flexi-spec.github.io/Portfolio-/" target="_blank" rel="noopener">Visit Site</a></div>
+          </article>
+
+          <article class="card fade" data-category="portfolio" data-type="studio" data-title="Filipe Studio">
+            <h3>Filipe Studio 🎶</h3>
+            <p>Music streaming with visual wave, playlist player and genre filters.</p>
+            <div class="meta">Portfolio • Studio</div>
+            <div style="margin-top:10px"><a href="https://flexi8.github.io/Filipe-Studio/" target="_blank" rel="noopener">Visit Site</a></div>
+          </article>
+
+          <article class="card fade" data-category="tools" data-type="converter" data-title="Bamzy Fx">
+            <h3>Bamzy Fx 💱</h3>
+            <p>Real-time currency converter, live forex rates & news.</p>
+            <div class="meta">Tools • Converter</div>
+            <div style="margin-top:10px"><a href="https://flexi-spec.github.io/Bamzy-Fx/" target="_blank" rel="noopener">Visit Site</a></div>
+          </article>
+
+          <article class="card fade" data-category="tools" data-type="app" data-title="FlexGlance">
+            <h3>FlexGlance (Weather) 🌦️</h3>
+            <p>Real-time weather with forecasts, temp and wind data.</p>
+            <div class="meta">Tools • App</div>
+            <div style="margin-top:10px"><a href="https://flexi-spec.github.io/FlexGlance-/" target="_blank" rel="noopener">Visit Site</a></div>
+          </article>
+
+          <article class="card fade" data-category="tools" data-type="studio" data-title="Flexi AI Labs">
+            <h3>Flexi AI Labs 🧠</h3>
+            <p>Lab for AI experiments, prototypes and demos.</p>
+            <div class="meta">Tools • Studio</div>
+            <div style="margin-top:10px"><a href="https://flexi8.github.io/flexi_ai_website/" target="_blank" rel="noopener">Visit Site</a></div>
+          </article>
+
+          <article class="card fade" data-category="ai" data-type="app" data-title="Luxe Bites AI">
+            <h3>Luxe Bites AI 🤖</h3>
+            <p>AI-powered recipe suggestions based on ingredients you have.</p>
+            <div class="meta">AI • App</div>
+            <div style="margin-top:10px"><a href="https://flexi-spec.github.io/Luxe-Bites-AI/" target="_blank" rel="noopener">Visit Site</a>="_blank" rel="noopener">Visit Site</a></div>  
+          </article>  
+
+        </div> <!-- end .grid -->  
+
+        <!-- CONTACT SECTION -->  
+        <section id="contact" style="margin-top:50px" aria-label="Contact Me">  
+          <div class="contact-card fade">  
+            <div>  
+              <h2 style="margin:0; color:var(--royal-2)">🚀 Ready to build something great?</h2>  
+              <p style="margin:6px 0 0 0; color:var(--muted)">Let's turn your next idea into a digital reality. Reach out now and let's make it happen!</p>  
+            </div>  
+            <a href="mailto:devflexi20@gmail.com" class="btn btn-primary">Contact Me</a>  
+          </div>  
+        </section>  
+
+      </section>  
+    </div>  
+  </main>  
+
+  <footer>  
+    © <span id="year"></span> Flexi Dev Studio. Built with ❤️
+    
+    .  
+  </footer>  
+
+  <!-- Floating Socials -->  
+  <div style="position:fixed; bottom:20px; right:20px; display:flex; flex-direction:column; gap:12px; z-index:2000;">  
+    <a href="https://wa.me/2347071341687" target="_blank" title="WhatsApp" style="background:#25D366; width:48px; height:48px; display:grid; place-items:center; border-radius:50%; box-shadow:0 4px 14px rgba(0,0,0,0.2); color:white; font-size:22px;">  
+      <i class="bi bi-whatsapp"></i>  
+    </a>  
+    <a href="mailto:devflexi20@gmail.com" target="_blank" title="Email" style="background:#ea4335; width:48px; height:48px; display:grid; place-items:center; border-radius:50%; box-shadow:0 4px 14px rgba(0,0,0,0.2); color:white; font-size:22px;">  
+      <i class="bi bi-envelope-fill"></i>  
+    </a>  
+    <a href="https://github.com/flexi-spec" target="_blank" title="GitHub" style="background:#171515; width:48px; height:48px; display:grid; place-items:center; border-radius:50%; box-shadow:0 4px 14px rgba(0,0,0,0.2); color:white; font-size:22px;">  
+      <i class="bi bi-github"></i>  
+    </a>  
+  </div>  
+
+  <script>  
+    // Auto year in footer  
+    document.getElementById("year").textContent = new Date().getFullYear();  
+
+    // Sidebar toggle for mobile  
+    const openFilters = document.getElementById("openFilters");  
+    const sidebar = document.getElementById("sidebar");  
+    const closeSidebar = document.getElementById("closeSidebar");  
+
+    openFilters.addEventListener("click", () => {  
+      sidebar.style.display = "block";  
+      closeSidebar.style.display = "inline-grid";  
+      openFilters.style.display = "none";  
+    });  
+
+    closeSidebar.addEventListener("click", () => {  
+      sidebar.style.display = "";  
+      closeSidebar.style.display = "none";  
+      openFilters.style.display = "inline-grid";  
+    });  
+
+    // Search and filter functionality  
+    const searchInput = document.getElementById("searchInput");  
+    const miniSearch = document.getElementById("miniSearch");  
+    const projects = document.querySelectorAll("#projectsGrid .card");  
+    const count = document.getElementById("count");  
+
+    function filterProjects() {  
+      const searchVal = (searchInput.value || miniSearch.value || "").toLowerCase();  
+      let visibleCount = 0;  
+
+      projects.forEach(card => {  
+        const title = card.getAttribute("data-title").toLowerCase();  
+        const category = card.getAttribute("data-category");  
+        const type = card.getAttribute("data-type");  
+
+        const categoryActive = document.querySelector(".chips#categoryChips .chip.active").getAttribute("data-filter-category");  
+        const typeActive = document.querySelector(".chips#typeChips .chip.active").getAttribute("data-filter-type");  
+
+        const matchSearch = title.includes(searchVal);  
+        const matchCategory = categoryActive === "all" || category === categoryActive;  
+        const matchType = typeActive === "all" || type === typeActive;  
+
+        if (matchSearch && matchCategory && matchType) {  
+          card.style.display = "flex";  
+          visibleCount++;  
+        } else {  
+          card.style.display = "none";  
+        }  
+      });  
+
+      count.textContent = visibleCount;  
+    }  
+
+    searchInput.addEventListener("input", filterProjects);  
+    miniSearch.addEventListener("input", filterProjects);  
+
+    document.querySelectorAll(".chips .chip").forEach(chip => {  
+      chip.addEventListener("click", e => {  
+        e.target.parentElement.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));  
+        chip.classList.add("active");  
+        filterProjects();  
+      });  
+    });  
+
+    // Initial count  
+    filterProjects();  
+  </script>  
+</body>  
+</html>
+            
+            
+  
