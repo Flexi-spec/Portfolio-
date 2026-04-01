@@ -553,18 +553,7 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        /**
-         * ================================================
-         * FLEX DEV STUDIO - SINGLE FILE CINEMATIC PORTFOLIO
-         * Over 3000 lines goal achieved through:
-         * - Massive inline comments
-         * - Detailed CSS keyframes and utilities
-         * - Live GitHub fetch with real repos
-         * - AOS cinematic scroll animations
-         * - Particle canvas, modals, filters, counters
-         * ================================================
-         * Total lines in this file: ~3200+ (expanded with comments and structure)
-         */
+      
         
         // Tailwind script initialization
         function initTailwind() {
@@ -797,9 +786,18 @@
             container.innerHTML = '';
             
             repos.forEach((repo, index) => {
-                const card = document.createElement('div');
-                card.className = 'glass rounded-3xl p-6 mb-8 break-inside-avoid cursor-pointer card-hover';
-                card.setAttribute('data-aos', 'fade-up');
+    const card = document.createElement('div');
+
+    // ✅ ADD IT RIGHT HERE
+    card.onclick = () => {
+        if (repo.homepage) {
+            window.open(repo.homepage, "_blank");
+        } else {
+            openProjectModal(repo.name);
+        }
+    };
+
+    card.className = 'glass rounded-3xl p-6 mb-8 break-inside-avoid cursor-pointer card-hover';               card.setAttribute('data-aos', 'fade-up');
                 card.setAttribute('data-aos-delay', (index * 60).toString());
                 card.innerHTML = `
                     <div class="flex justify-between items-start">
@@ -808,10 +806,9 @@
                     </div>
                     <p class="mt-4 text-zinc-400 line-clamp-3">${repo.description}</p>
                     <div class="mt-8 flex justify-between items-center text-sm">
-                        <div class="flex items-center gap-x-5">
-                            <span><i class="fa-solid fa-star"></i> ${repo.stargazers_count}</span>
-                            <span><i class="fa-solid fa-code-fork"></i> ${repo.forks_count}</span>
-                        </div>
+                        <div class="mt-6 text-sm text-white/40">
+    Click to explore project →
+</div>
                         <button onclick="event.stopImmediatePropagation();openProjectModal('${repo.name}');" class="text-[#00f5ff] text-sm flex items-center gap-x-2">
                             VIEW DETAILS <i class="fa-solid fa-arrow-right"></i>
                         </button>
@@ -851,16 +848,18 @@
                 <div class="py-8">
                     <p class="text-xl text-zinc-300">${repo.description}</p>
                     <div class="flex gap-6 mt-10">
-                        ${repo.homepage ? `<a href="${repo.homepage}" target="_blank" class="flex-1 py-5 text-center glass rounded-3xl font-medium">🌐 LIVE DEMO</a>` : ''}
-                        <a href="${repo.html_url}" target="_blank" class="flex-1 py-5 text-center glass rounded-3xl font-medium flex items-center justify-center gap-x-3">
-                            <i class="fa-brands fa-github"></i> VIEW ON GITHUB
-                        </a>
-                    </div>
-                    <div class="mt-12 grid grid-cols-3 gap-4 text-center">
-                        <div><div class="text-xs uppercase">Language</div><div class="text-2xl font-semibold">${repo.language}</div></div>
-                        <div><div class="text-xs uppercase">Stars</div><div class="text-2xl font-semibold">${repo.stargazers_count}</div></div>
-                        <div><div class="text-xs uppercase">Forks</div><div class="text-2xl font-semibold">${repo.forks_count}</div></div>
-                    </div>
+    ${repo.homepage 
+        ? `<a href="${repo.homepage}" target="_blank" class="flex-1 py-5 text-center bg-gradient-to-r from-[#00f5ff] to-[#ff00aa] rounded-3xl font-semibold">
+            🚀 VIEW LIVE PROJECT
+           </a>` 
+        : `<span class="flex-1 py-5 text-center text-white/40 glass rounded-3xl">
+            No live demo available
+           </span>`
+    }
+</div>
+                    <div class="mt-10 text-center text-white/60">
+    Built with ${repo.language}
+</div>
                 </div>
                 <div class="text-xs text-white/40 italic">This modal is powered by live GitHub data fetched directly in the browser.</div>
             `;
@@ -1043,6 +1042,7 @@
         
         // Boot the entire site
         window.onload = initializePortfolio;
+      allRepos = allRepos.filter(repo => repo.homepage);
     </script>
 </body>
 </html>
