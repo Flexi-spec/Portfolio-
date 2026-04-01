@@ -9,29 +9,21 @@
 <!-- Primary SEO -->
 <meta name="title" content="Flexi Dev Studio" />
 <meta name="description" content="Flexi Dev Studio creates fast, modern and affordable websites, AI tools, and digital experiences. Explore our portfolio of web apps, food projects, gospel tools, and smart AI solutions." />
-<meta name="keywords" content="Flexi Dev Studio, web developer Nigeria, frontend developer, AI tools, website design, portfolio, JavaScript developer, HTML CSS projects, freelance developer, Abuja developer, modern websites, responsive design, UI UX, web apps, Nigerian tech" />
+<meta name="keywords" content="Flexi Dev Studio, web developer Nigeria, frontend developer, AI tools, website design, portfolio, JavaScript developer, HTML CSS projects, freelance developer, Abuja developer" />
 <meta name="author" content="Flexi Dev Studio" />
 <meta name="robots" content="index, follow" />
-<meta name="language" content="en" />
-<meta name="revisit-after" content="7 days" />
 
 <!-- Canonical -->
 <link rel="canonical" href="https://flexi-dev-studio.vercel.app/" />
-
-<!-- Theme -->
-<meta name="theme-color" content="#0f172a" />
-
-<!-- Google Verification -->
+<meta name="theme-color" content="#008080" />
 <meta name="google-site-verification" content="V5fJknzW_jqkhS_9AHXuvdTx9DdiJfPc3f_FJhcFVg4" />
 
-<!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+<!-- Open Graph -->
 <meta property="og:type" content="website" />
 <meta property="og:title" content="Flexi Dev Studio" />
 <meta property="og:description" content="Turning your ideas into digital reality — explore our web creations, tools, and AI experiments." />
 <meta property="og:image" content="https://flexi-dev-studio.vercel.app/logo.png" />
 <meta property="og:url" content="https://flexi-dev-studio.vercel.app/" />
-<meta property="og:site_name" content="Flexi Dev Studio" />
-<meta property="og:locale" content="en_US" />
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image" />
@@ -39,1010 +31,1577 @@
 <meta name="twitter:description" content="Explore powerful websites, AI tools, and creative digital projects built by Flexi Dev Studio." />
 <meta name="twitter:image" content="https://flexi-dev-studio.vercel.app/logo.png" />
 
-<!-- Favicon / Logo -->
+<!-- Favicon -->
 <link rel="icon" type="image/png" href="https://flexi-dev-studio.vercel.app/logo.png" />
-<link rel="apple-touch-icon" href="https://flexi-dev-studio.vercel.app/logo.png" />
 
-<!-- Schema: Organization (Google Logo Recognition) -->
+<!-- Schema -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Flexi Dev Studio",
   "url": "https://flexi-dev-studio.vercel.app/",
-  "logo": "https://flexi-dev-studio.vercel.app/logo.png",
-  "sameAs": [
-    "https://github.com/flexi-spec"
-  ]
+  "logo": "https://flexi-dev-studio.vercel.app/logo.png"
 }
 </script>
 
-<!-- Schema: Website -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Flexi Dev Studio",
-  "url": "https://flexi-dev-studio.vercel.app/",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://flexi-dev-studio.vercel.app/?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
-</script>
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<!-- Extra SEO Boost (Geo + Identity) -->
-<meta name="geo.region" content="NG" />
-<meta name="geo.placename" content="Nigeria" />
-<meta name="geo.position" content="9.0765;7.3986" />
-<meta name="ICBM" content="9.0765, 7.3986" />
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- AOS - Animate On Scroll for cinematic feel -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-    
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap');
-        
-        /* ==================== ROOT &amp; GLOBAL VARIABLES ==================== */
-        :root {
-            --primary-cyan: #00f5ff;
-            --primary-pink: #ff00aa;
-            --glass-bg: rgba(15, 23, 42, 0.85);
-            --text-glow: 0 0 20px #00f5ff;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            /* Line 1 of global reset - every element gets smooth transitions */
-            transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform;
-            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-            transition-duration: 200ms;
-        }
-        
-        body {
-            font-family: 'Inter', system_ui, sans-serif;
-            background: #0a0a0a;
-            color: #e2e8f0;
-            overflow-x: hidden;
-            /* Line 15 - cinematic dark base */
-        }
-        
-        .heading-font {
-            font-family: 'Space Grotesk', sans-serif;
-        }
-        
-        /* ==================== GLASSMORPHISM &amp; NEON SYSTEM ==================== */
-        .glass {
-            background: var(--glass-bg);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            box-shadow: 0 8px 32px -12px rgb(0 245 255);
-        }
-        
-        .neon-text {
-            text-shadow: 
-                0 0 10px #00f5ff,
-                0 0 20px #00f5ff,
-                0 0 40px #ff00aa,
-                0 0 60px #ff00aa;
-        }
-        
-        .neon-button {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .neon-button::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 40%;
-            height: 300%;
-            background: linear-gradient(
-                90deg,
-                transparent,
-                rgba(255,255,255,0.4),
-                transparent
-            );
-            transform: skewX(-25deg);
-            animation: neon-shimmer 4s linear infinite;
-        }
-        
-        @keyframes neon-shimmer {
-            0% { transform: translateX(-150%) skewX(-25deg); }
-            100% { transform: translateX(300%) skewX(-25deg); }
-        }
-        
-        /* ==================== HERO PARTICLE CANVAS &amp; CINEMATIC BG ==================== */
-        .hero-bg {
-            background: radial-gradient(circle at 20% 30%, rgba(0, 245, 255, 0.25) 0%, transparent 60%),
-                        radial-gradient(circle at 80% 70%, rgba(255, 0, 170, 0.25) 0%, transparent 60%);
-        }
-        
-        /* Massive CSS keyframes block - expanding for line count */
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-25px); }
-        }
-        
-        @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 15px #00f5ff; }
-            50% { box-shadow: 0 0 40px #ff00aa; }
-        }
-        
-        @keyframes scanline {
-            0% { background-position: 0 0; }
-            100% { background-position: 0 100%; }
-        }
-        
-        .scan-bg {
-            animation: scanline 8s linear infinite;
-        }
-        
-        /* 100+ custom utility classes with detailed comments */
-        .text-glow-cyan { text-shadow: var(--text-glow); } /* Line 80 */
-        .card-hover { transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1); } /* cinematic bounce */
-        .card-hover:hover { transform: scale(1.05) rotate(1deg); box-shadow: 25px 25px 50px -12px rgb(0 245 255 / 0.3); }
-        
-        /* More keyframes to bloat line count responsibly */
-        @keyframes modalEntrance {
-            0% { opacity: 0; transform: scale(0.8) translateY(60px); }
-            100% { opacity: 1; transform: scale(1) translateY(0); }
-        }
-        
-        .modal-content {
-            animation: modalEntrance 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-        }
-        
-        /* Project masonry specific styles */
-        .masonry-grid {
-            column-count: 3;
-            column-gap: 2rem;
-        }
-        
-        @media (max-width: 1024px) {
-            .masonry-grid { column-count: 2; }
-        }
-        
-        @media (max-width: 640px) {
-            .masonry-grid { column-count: 1; }
-        }
-        
-        /* Extended CSS for cinematic scroll indicators, parallax layers, etc. */
-        .parallax-layer {
-            transition: transform 0.1s ease-out;
-        }
-        
-        /* 200+ lines of additional custom CSS rules follow with comments */
-        .section-divider {
-            height: 1px;
-            background: linear-gradient(to right, transparent, #00f5ff, transparent);
-            margin: 6rem 0;
-            opacity: 0.3;
-        }
-        
-        .stat-number {
-            font-variant-numeric: tabular-nums;
-        }
-        
-        /* Tailwind script will be configured in JS for dark theme consistency */
-        
-        /* END OF STYLE SECTION - total CSS lines already pushing 450+ with comments */
-    </style>
+<style>
+/* ============================================================
+   WINDOWS 2000 DESIGN SYSTEM
+   Color Palette:
+     #d4d0c8 - Classic Win2K silver/gray surface
+     #ffffff - Window content area
+     #000080 - Active title bar (navy)
+     #008080 - Desktop teal / accent
+     #808080 - Gray shadow edges
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Tahoma:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --win-face:       #d4d0c8;
+    --win-highlight:  #ffffff;
+    --win-shadow:     #808080;
+    --win-dark:       #404040;
+    --win-titlebar:   #000080;
+    --win-desktop:    #008080;
+    --win-text:       #000000;
+    --win-btn:        #d4d0c8;
+    --win-inset:      #c0c0c0;
+    --win-border-lt:  #ffffff;
+    --win-border-dk:  #808080;
+    --win-blue-grad:  linear-gradient(to right, #000080, #1084d0);
+    --win-link:       #0000cc;
+    --win-link-hover: #cc0000;
+}
+
+/* Classic Win2K raised/sunken border helpers */
+.raised {
+    border-top:    2px solid var(--win-highlight);
+    border-left:   2px solid var(--win-highlight);
+    border-right:  2px solid var(--win-shadow);
+    border-bottom: 2px solid var(--win-shadow);
+}
+.raised-outer {
+    border-top:    2px solid var(--win-border-lt);
+    border-left:   2px solid var(--win-border-lt);
+    border-right:  2px solid var(--win-dark);
+    border-bottom: 2px solid var(--win-dark);
+}
+.sunken {
+    border-top:    2px solid var(--win-shadow);
+    border-left:   2px solid var(--win-shadow);
+    border-right:  2px solid var(--win-highlight);
+    border-bottom: 2px solid var(--win-highlight);
+}
+.sunken-outer {
+    border-top:    2px solid var(--win-dark);
+    border-left:   2px solid var(--win-dark);
+    border-right:  2px solid var(--win-border-lt);
+    border-bottom: 2px solid var(--win-border-lt);
+}
+
+html, body {
+    font-family: 'Tahoma', 'MS Sans Serif', Arial, sans-serif;
+    font-size: 11px;
+    background-color: var(--win-desktop);
+    color: var(--win-text);
+    min-height: 100vh;
+}
+
+/* ==================== DESKTOP TILED PATTERN ==================== */
+body {
+    background-color: #008080;
+    background-image:
+        repeating-linear-gradient(0deg, transparent, transparent 15px, rgba(0,0,0,0.03) 15px, rgba(0,0,0,0.03) 16px),
+        repeating-linear-gradient(90deg, transparent, transparent 15px, rgba(0,0,0,0.03) 15px, rgba(0,0,0,0.03) 16px);
+    padding-bottom: 44px; /* room for taskbar */
+}
+
+/* ==================== TASKBAR ==================== */
+#taskbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 44px;
+    background: var(--win-face);
+    border-top: 2px solid var(--win-highlight);
+    display: flex;
+    align-items: center;
+    z-index: 9999;
+    padding: 0 4px;
+    gap: 4px;
+}
+
+#start-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 8px;
+    background: var(--win-face);
+    font-family: 'Tahoma', sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    border-top:    2px solid var(--win-highlight);
+    border-left:   2px solid var(--win-highlight);
+    border-right:  2px solid var(--win-shadow);
+    border-bottom: 2px solid var(--win-shadow);
+    height: 34px;
+}
+#start-btn:active {
+    border-top:    2px solid var(--win-shadow);
+    border-left:   2px solid var(--win-shadow);
+    border-right:  2px solid var(--win-highlight);
+    border-bottom: 2px solid var(--win-highlight);
+}
+#start-btn .win-logo {
+    width: 20px;
+    height: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+}
+#start-btn .win-logo span {
+    display: block;
+}
+#start-btn .win-logo span:nth-child(1) { background: #ff0000; }
+#start-btn .win-logo span:nth-child(2) { background: #00aa00; }
+#start-btn .win-logo span:nth-child(3) { background: #0000ff; }
+#start-btn .win-logo span:nth-child(4) { background: #ffaa00; }
+
+.taskbar-divider {
+    width: 2px;
+    height: 34px;
+    border-left: 1px solid var(--win-shadow);
+    border-right: 1px solid var(--win-highlight);
+}
+
+.taskbar-btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 10px;
+    height: 34px;
+    font-size: 11px;
+    font-family: 'Tahoma', sans-serif;
+    background: var(--win-face);
+    cursor: pointer;
+    max-width: 160px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-top:    2px solid var(--win-highlight);
+    border-left:   2px solid var(--win-highlight);
+    border-right:  2px solid var(--win-shadow);
+    border-bottom: 2px solid var(--win-shadow);
+}
+.taskbar-btn:hover, .taskbar-btn.active {
+    border-top:    2px solid var(--win-shadow);
+    border-left:   2px solid var(--win-shadow);
+    border-right:  2px solid var(--win-highlight);
+    border-bottom: 2px solid var(--win-highlight);
+}
+.taskbar-btn i { font-size: 13px; color: #000080; }
+
+#taskbar-clock {
+    margin-left: auto;
+    padding: 0 8px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    font-size: 11px;
+    border-top:    2px solid var(--win-shadow);
+    border-left:   2px solid var(--win-shadow);
+    border-right:  2px solid var(--win-highlight);
+    border-bottom: 2px solid var(--win-highlight);
+    white-space: nowrap;
+}
+
+/* ==================== WINDOW CHROME ==================== */
+.win-window {
+    background: var(--win-face);
+    border-top:    2px solid var(--win-highlight);
+    border-left:   2px solid var(--win-highlight);
+    border-right:  2px solid var(--win-dark);
+    border-bottom: 2px solid var(--win-dark);
+    margin: 16px auto;
+    position: relative;
+}
+
+.win-titlebar {
+    background: var(--win-blue-grad);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 5px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    user-select: none;
+    height: 26px;
+}
+.win-titlebar .title-icon {
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+}
+.win-titlebar .title-text { flex: 1; }
+.win-titlebar-btns {
+    display: flex;
+    gap: 2px;
+    margin-left: auto;
+}
+.win-ctrl-btn {
+    width: 22px;
+    height: 20px;
+    background: var(--win-face);
+    color: black;
+    font-size: 11px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top:    2px solid var(--win-highlight);
+    border-left:   2px solid var(--win-highlight);
+    border-right:  2px solid var(--win-shadow);
+    border-bottom: 2px solid var(--win-shadow);
+    font-family: 'Tahoma', sans-serif;
+}
+.win-ctrl-btn:active {
+    border-top:    2px solid var(--win-shadow);
+    border-left:   2px solid var(--win-shadow);
+    border-right:  2px solid var(--win-highlight);
+    border-bottom: 2px solid var(--win-highlight);
+}
+.win-close-btn { background: var(--win-face); }
+
+.win-menubar {
+    display: flex;
+    gap: 0;
+    padding: 2px 4px;
+    font-size: 11px;
+    border-bottom: 1px solid var(--win-shadow);
+}
+.win-menu-item {
+    padding: 2px 8px;
+    cursor: pointer;
+    position: relative;
+}
+.win-menu-item:hover {
+    background: var(--win-titlebar);
+    color: white;
+}
+.win-menu-item span { text-decoration: underline; }
+
+.win-toolbar {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 3px 4px;
+    border-bottom: 1px solid var(--win-shadow);
+}
+.win-toolbar-btn {
+    padding: 2px 8px;
+    font-size: 11px;
+    font-family: 'Tahoma', sans-serif;
+    background: var(--win-face);
+    cursor: pointer;
+    border-top:    1px solid var(--win-highlight);
+    border-left:   1px solid var(--win-highlight);
+    border-right:  1px solid var(--win-shadow);
+    border-bottom: 1px solid var(--win-shadow);
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.win-toolbar-btn:hover {
+    background: #e8e4dc;
+}
+.win-toolbar-btn i { font-size: 12px; }
+
+.win-content {
+    background: var(--win-highlight);
+    padding: 12px;
+    margin: 3px;
+    border-top:    2px solid var(--win-shadow);
+    border-left:   2px solid var(--win-shadow);
+    border-right:  2px solid var(--win-highlight);
+    border-bottom: 2px solid var(--win-highlight);
+}
+
+.win-status-bar {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 2px 4px;
+    font-size: 10px;
+    color: var(--win-text);
+    border-top: 1px solid var(--win-shadow);
+}
+.win-status-pane {
+    padding: 1px 6px;
+    border-top:    1px solid var(--win-shadow);
+    border-left:   1px solid var(--win-shadow);
+    border-right:  1px solid var(--win-highlight);
+    border-bottom: 1px solid var(--win-highlight);
+}
+
+/* ==================== WIN2K BUTTONS ==================== */
+.win-btn {
+    padding: 4px 16px;
+    min-width: 75px;
+    height: 26px;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 11px;
+    background: var(--win-face);
+    color: var(--win-text);
+    cursor: pointer;
+    border-top:    2px solid var(--win-highlight);
+    border-left:   2px solid var(--win-highlight);
+    border-right:  2px solid var(--win-shadow);
+    border-bottom: 2px solid var(--win-shadow);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    text-decoration: none;
+    outline: none;
+    white-space: nowrap;
+}
+.win-btn:hover { background: #e8e4dc; }
+.win-btn:active, .win-btn:focus-visible {
+    border-top:    2px solid var(--win-shadow);
+    border-left:   2px solid var(--win-shadow);
+    border-right:  2px solid var(--win-highlight);
+    border-bottom: 2px solid var(--win-highlight);
+}
+.win-btn-default {
+    border: 3px solid #000000;
+    outline: 2px solid var(--win-face);
+}
+
+/* ==================== WIN2K FORM INPUTS ==================== */
+.win-input {
+    font-family: 'Tahoma', sans-serif;
+    font-size: 11px;
+    background: white;
+    color: black;
+    padding: 3px 5px;
+    border-top:    2px solid var(--win-shadow);
+    border-left:   2px solid var(--win-shadow);
+    border-right:  2px solid var(--win-highlight);
+    border-bottom: 2px solid var(--win-highlight);
+    outline: none;
+    width: 100%;
+}
+.win-input:focus {
+    outline: 1px dotted #000080;
+}
+textarea.win-input {
+    resize: vertical;
+}
+
+/* ==================== WIN2K PROGRESS BAR ==================== */
+.win-progress {
+    height: 18px;
+    background: white;
+    border-top:    2px solid var(--win-shadow);
+    border-left:   2px solid var(--win-shadow);
+    border-right:  2px solid var(--win-highlight);
+    border-bottom: 2px solid var(--win-highlight);
+    padding: 2px;
+}
+.win-progress-bar {
+    height: 100%;
+    background: repeating-linear-gradient(
+        90deg,
+        #000080 0px,
+        #000080 8px,
+        #0050c8 8px,
+        #0050c8 10px
+    );
+    transition: width 1.2s ease;
+}
+
+/* ==================== WIN2K TABS ==================== */
+.win-tabs {
+    display: flex;
+    border-bottom: 2px solid var(--win-shadow);
+    margin-bottom: -2px;
+    gap: 2px;
+}
+.win-tab {
+    padding: 4px 14px;
+    font-size: 11px;
+    font-family: 'Tahoma', sans-serif;
+    cursor: pointer;
+    background: var(--win-inset);
+    border-top:    2px solid var(--win-highlight);
+    border-left:   2px solid var(--win-highlight);
+    border-right:  2px solid var(--win-shadow);
+    border-bottom: none;
+    position: relative;
+    bottom: -2px;
+    color: #555;
+}
+.win-tab.active {
+    background: var(--win-face);
+    color: black;
+    font-weight: bold;
+    z-index: 1;
+    border-bottom: 2px solid var(--win-face);
+}
+.win-tab-content { display: none; }
+.win-tab-content.active { display: block; }
+
+/* ==================== SECTION LAYOUT ==================== */
+.desktop-container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 8px;
+}
+
+/* ==================== DESKTOP ICONS ==================== */
+.desktop-icons {
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    z-index: 100;
+}
+.desktop-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 64px;
+    cursor: pointer;
+    padding: 4px;
+    text-align: center;
+}
+.desktop-icon:hover .icon-label,
+.desktop-icon:focus .icon-label {
+    background: #000080;
+    color: white;
+}
+.desktop-icon .icon-img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 2px;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    image-rendering: pixelated;
+}
+.desktop-icon .icon-label {
+    font-size: 10px;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    padding: 1px 2px;
+    word-break: break-word;
+    line-height: 1.2;
+}
+
+/* ==================== WIN2K LIST/TABLE STYLES ==================== */
+.win-list {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 11px;
+}
+.win-list th {
+    background: var(--win-face);
+    padding: 3px 8px;
+    text-align: left;
+    font-weight: bold;
+    border-top:    2px solid var(--win-highlight);
+    border-left:   2px solid var(--win-highlight);
+    border-right:  2px solid var(--win-shadow);
+    border-bottom: 2px solid var(--win-shadow);
+    white-space: nowrap;
+}
+.win-list td {
+    padding: 3px 8px;
+    border-bottom: 1px solid #e0dcd4;
+}
+.win-list tr:hover td {
+    background: #000080;
+    color: white;
+}
+.win-list tr:nth-child(even) td {
+    background: #f0ede8;
+}
+.win-list tr:hover td {
+    background: #000080;
+    color: white;
+}
+
+/* ==================== GROUPBOX ==================== */
+.win-groupbox {
+    border: 1px solid var(--win-shadow);
+    border-top: none;
+    padding: 8px;
+    margin-top: 8px;
+    position: relative;
+}
+.win-groupbox-label {
+    position: absolute;
+    top: -8px;
+    left: 8px;
+    background: var(--win-highlight);
+    padding: 0 4px;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+/* ==================== ADDRESS BAR ==================== */
+.win-address-bar {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 4px;
+    background: var(--win-face);
+    font-size: 11px;
+    border-bottom: 1px solid var(--win-shadow);
+}
+.win-address-bar label { white-space: nowrap; }
+.win-address-input {
+    flex: 1;
+    font-family: 'Tahoma', sans-serif;
+    font-size: 11px;
+    padding: 2px 4px;
+    background: white;
+    border-top:    2px solid var(--win-shadow);
+    border-left:   2px solid var(--win-shadow);
+    border-right:  2px solid var(--win-highlight);
+    border-bottom: 2px solid var(--win-highlight);
+    outline: none;
+}
+
+/* ==================== SECTION HELPERS ==================== */
+.win-section-header {
+    background: var(--win-blue-grad);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 10px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ==================== MODAL ==================== */
+#project-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+#project-modal.show {
+    display: flex;
+}
+#modal-window {
+    background: var(--win-face);
+    max-width: 540px;
+    width: 100%;
+    border-top:    2px solid var(--win-highlight);
+    border-left:   2px solid var(--win-highlight);
+    border-right:  2px solid var(--win-dark);
+    border-bottom: 2px solid var(--win-dark);
+}
+#modal-inner {
+    padding: 12px;
+    background: white;
+    margin: 3px;
+    border-top:    2px solid var(--win-shadow);
+    border-left:   2px solid var(--win-shadow);
+    border-right:  2px solid var(--win-highlight);
+    border-bottom: 2px solid var(--win-highlight);
+    min-height: 120px;
+}
+
+/* ==================== IE-STYLE ADDRESS BAR FULLWIDTH ==================== */
+.ie-chrome {
+    background: var(--win-face);
+    border-top:    2px solid var(--win-highlight);
+    border-left:   2px solid var(--win-highlight);
+    border-right:  2px solid var(--win-dark);
+    border-bottom: 2px solid var(--win-dark);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* ==================== SKILL BARS ==================== */
+.skill-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+.skill-label {
+    font-size: 11px;
+    width: 130px;
+    flex-shrink: 0;
+}
+
+/* ==================== LINKS ==================== */
+a { color: var(--win-link); font-size: 11px; }
+a:hover { color: var(--win-link-hover); text-decoration: underline; }
+
+/* ==================== TICKER ==================== */
+.win-ticker {
+    background: white;
+    border-top:    2px solid var(--win-shadow);
+    border-left:   2px solid var(--win-shadow);
+    border-right:  2px solid var(--win-highlight);
+    border-bottom: 2px solid var(--win-highlight);
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 11px;
+    padding: 2px 0;
+}
+.win-ticker-inner {
+    display: inline-block;
+    animation: ticker-scroll 30s linear infinite;
+    padding-left: 100%;
+}
+@keyframes ticker-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-100%); }
+}
+
+/* ==================== NOTIFICATION BUBBLE ==================== */
+.win-bubble {
+    background: #fffdc0;
+    border: 1px solid #8a7200;
+    padding: 6px 10px;
+    font-size: 11px;
+    position: relative;
+    display: inline-block;
+    max-width: 260px;
+}
+.win-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 12px;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 8px solid #8a7200;
+}
+
+/* ==================== LOADING DOTS ==================== */
+.loading-dots span {
+    animation: blink 1.2s infinite;
+    font-size: 14px;
+}
+.loading-dots span:nth-child(2) { animation-delay: 0.3s; }
+.loading-dots span:nth-child(3) { animation-delay: 0.6s; }
+@keyframes blink {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    .desktop-icons { display: none; }
+    .win-window { margin: 8px auto; }
+    .two-col { flex-direction: column; }
+    .ie-chrome .win-toolbar .hide-mobile { display: none; }
+}
+
+/* ==================== SELECTION HIGHLIGHT ==================== */
+::selection {
+    background: #000080;
+    color: white;
+}
+
+/* scrollbar */
+::-webkit-scrollbar { width: 17px; }
+::-webkit-scrollbar-track { background: var(--win-face); }
+::-webkit-scrollbar-thumb {
+    background: var(--win-face);
+    border-top:    2px solid var(--win-highlight);
+    border-left:   2px solid var(--win-highlight);
+    border-right:  2px solid var(--win-shadow);
+    border-bottom: 2px solid var(--win-shadow);
+}
+::-webkit-scrollbar-button {
+    background: var(--win-face);
+    height: 17px;
+    border-top:    2px solid var(--win-highlight);
+    border-left:   2px solid var(--win-highlight);
+    border-right:  2px solid var(--win-shadow);
+    border-bottom: 2px solid var(--win-shadow);
+}
+
+</style>
 </head>
 
-<body class="bg-[#0a0a0a] text-[#e2e8f0]">
-    <!-- NAVBAR - fully expanded with comments -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-[9999] glass border-b border-white/10 py-5">
-        <div class="max-w-screen-2xl mx-auto px-8 flex items-center justify-between">
-            <!-- Logo with cinematic hover -->
-            <a href="#" onclick="smoothScrollTo('home')" class="flex items-center gap-x-3 group">
-                <div class="w-10 h-10 bg-gradient-to-br from-[#00f5ff] to-[#ff00aa] rounded-3xl flex items-center justify-center text-white text-3xl font-black shadow-2xl group-hover:rotate-12">F</div>
-                <div class="heading-font text-3xl font-semibold tracking-[-2px]">Flexi Dev Studio</div>
-            </a>
+<body>
 
-            <!-- Desktop Links -->
-            <div class="hidden xl:flex items-center gap-x-10 text-base font-medium">
-                <a href="#home" onclick="smoothScrollTo('home');" class="hover:text-[#00f5ff] flex items-center gap-x-1">HOME <span class="text-xs text-white/30">01</span></a>
-                <a href="#about" onclick="smoothScrollTo('about');" class="hover:text-[#00f5ff] flex items-center gap-x-1">ABOUT <span class="text-xs text-white/30">02</span></a>
-                <a href="#projects" onclick="smoothScrollTo('projects');" class="hover:text-[#00f5ff] flex items-center gap-x-1">PROJECTS <span class="text-xs text-white/30">03</span></a>
-                <a href="#services" onclick="smoothScrollTo('services');" class="hover:text-[#00f5ff] flex items-center gap-x-1">SERVICES <span class="text-xs text-white/30">04</span></a>
-                <a href="#manifesto" onclick="smoothScrollTo('manifesto');" class="hover:text-[#00f5ff] flex items-center gap-x-1">MANIFESTO <span class="text-xs text-white/30">05</span></a>
-                <a href="#contact" onclick="smoothScrollTo('contact');" class="hover:text-[#00f5ff] flex items-center gap-x-1">CONTACT <span class="text-xs text-white/30">06</span></a>
-            </div>
+<!-- ============================================================
+     TASKBAR
+     ============================================================ -->
+<div id="taskbar" role="toolbar" aria-label="Taskbar">
+    <button id="start-btn" aria-label="Start Menu" onclick="toggleStartMenu()">
+        <div class="win-logo" aria-hidden="true">
+            <span></span><span></span><span></span><span></span>
+        </div>
+        <strong>Start</strong>
+    </button>
 
-            <div class="flex items-center gap-x-6">
-                <!-- Live GitHub indicator -->
-                <div class="hidden md:flex items-center gap-x-2 bg-white/5 px-4 h-9 rounded-3xl text-xs font-mono border border-[#00f5ff]/30">
-                    <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                    LIVE • 42 REPOS
-                </div>
-                
-                <!-- AOS enabled dark mode toggle -->
-                <button onclick="toggleTheme()" id="theme-toggle" class="glass w-10 h-10 rounded-2xl flex items-center justify-center hover:scale-110">
-                    <i id="theme-icon" class="fa-solid fa-moon text-xl"></i>
-                </button>
-                
-                <!-- Hamburger -->
-                <button onclick="toggleMobileMenu()" class="xl:hidden glass w-11 h-11 rounded-2xl flex items-center justify-center text-2xl">
-                    <i id="hamburger-icon" class="fa-solid fa-bars"></i>
-                </button>
-            </div>
-        </div>
-        
-        <!-- Mobile Menu - expanded -->
-        <div id="mobile-menu" class="hidden xl:hidden fixed inset-0 top-[73px] bg-[#0a0a0a] z-[9998] pt-8 px-8 flex flex-col">
-            <a onclick="toggleMobileMenu();smoothScrollTo('home')" class="py-6 text-2xl border-b border-white/10">Home</a>
-            <a onclick="toggleMobileMenu();smoothScrollTo('about')" class="py-6 text-2xl border-b border-white/10">About Me</a>
-            <a onclick="toggleMobileMenu();smoothScrollTo('projects')" class="py-6 text-2xl border-b border-white/10">All Projects</a>
-            <a onclick="toggleMobileMenu();smoothScrollTo('services')" class="py-6 text-2xl border-b border-white/10">Services</a>
-            <a onclick="toggleMobileMenu();smoothScrollTo('manifesto')" class="py-6 text-2xl border-b border-white/10">Studio Manifesto</a>
-            <a onclick="toggleMobileMenu();smoothScrollTo('contact')" class="py-6 text-2xl border-b border-white/10">Get In Touch</a>
-        </div>
-    </nav>
+    <div class="taskbar-divider" aria-hidden="true"></div>
 
-    <!-- HERO SECTION - cinematic with particle canvas and AOS -->
-    <section id="home" class="min-h-screen hero-bg flex items-center relative pt-20">
-        <!-- Background particle canvas -->
-        <canvas id="hero-canvas" class="absolute inset-0 pointer-events-none z-0"></canvas>
-        
-        <div class="max-w-screen-2xl mx-auto px-8 grid lg:grid-cols-12 gap-12 items-center relative z-10">
-            <div class="lg:col-span-7" data-aos="fade-up" data-aos-duration="1200">
-                <div class="inline-flex items-center rounded-3xl border border-[#00f5ff]/30 bg-white/5 px-6 py-2 mb-8 text-sm backdrop-blur-md">
-                    <span class="text-green-400">●</span>
-                    <span class="ml-2 font-medium">NOW LIVE • Fetching real GitHub repos</span>
-                </div>
-                
-                <h1 class="heading-font text-6xl lg:text-7xl xl:text-8xl leading-[1.05] font-semibold tracking-[-4px] neon-text">
-                    TURNING IDEAS<br>INTO <span class="bg-gradient-to-r from-[#00f5ff] via-[#ff00aa] to-[#00f5ff] bg-clip-text text-transparent">CINEMATIC</span><br>DIGITAL REALITY
-                </h1>
-                
-                <div id="hero-typing" class="mt-8 text-2xl text-[#00f5ff] font-medium flex items-center gap-3">
-                    <span>Full Stack • AI Builder • Creative Coder</span>
-                </div>
-                
-                <div class="flex flex-wrap gap-4 mt-12">
-                    <button onclick="smoothScrollTo('projects')" 
-                            class="neon-button px-10 py-5 text-lg font-semibold rounded-3xl bg-white text-black flex items-center gap-x-4 hover:scale-105">
-                        EXPLORE 42+ PROJECTS
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-                    <button onclick="smoothScrollTo('contact')" 
-                            class="px-10 py-5 text-lg font-medium border-2 border-white/60 hover:border-[#ff00aa] rounded-3xl">
-                        START A PROJECT
-                    </button>
-                </div>
-                
-                <!-- Live stats with animated counters -->
-                <div class="mt-16 grid grid-cols-3 gap-8">
-                    <div data-aos="fade-up" data-aos-delay="300">
-                        <div id="live-repos" class="text-6xl font-bold text-[#00f5ff] stat-number">42</div>
-                        <div class="text-sm uppercase tracking-[2px]">GitHub Repos Fetched Live</div>
-                    </div>
-                    <div data-aos="fade-up" data-aos-delay="500">
-                        <div id="live-stars" class="text-6xl font-bold text-[#ff00aa] stat-number">8</div>
-                        <div class="text-sm uppercase tracking-[2px]">Total Stars Across Projects</div>
-                    </div>
-                    <div data-aos="fade-up" data-aos-delay="700">
-                        <div id="live-vercel" class="text-6xl font-bold text-amber-400 stat-number">12</div>
-                        <div class="text-sm uppercase tracking-[2px]">Live on Vercel</div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Right side cinematic 3D-like preview -->
-            <div class="lg:col-span-5 hidden lg:flex justify-end" data-aos="fade-left" data-aos-duration="1400">
-                <div class="relative w-full max-w-md">
-                    <div class="aspect-video bg-zinc-900 rounded-3xl overflow-hidden border border-white/10 shadow-2xl relative">
-                        <div class="absolute inset-0 bg-[radial-gradient(#00f5ff_1px,transparent_1px)] bg-[length:40px_40px] opacity-10"></div>
-                        <div class="p-8 flex flex-col h-full justify-between">
-                            <div class="flex justify-between">
-                                <div class="text-xs font-mono">FLEXISPEC • LIVE</div>
-                                <div class="px-4 py-1 text-xs rounded-3xl bg-[#ff00aa]/10 text-[#ff00aa]">NOW BUILDING</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-5xl font-bold heading-font">BAMZY-FX</div>
-                                <div class="text-[#00f5ff] mt-3">Real-time Forex + AI Signals</div>
-                            </div>
-                            <div class="flex justify-center gap-8 text-4xl">
-                                <i class="fa-solid fa-chart-line"></i>
-                                <i class="fa-solid fa-robot"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Floating badge -->
-                    <div class="absolute -top-6 -right-6 glass px-8 py-4 rounded-3xl text-sm shadow-2xl flex items-center gap-x-3">
-                        <i class="fa-solid fa-github text-2xl"></i>
-                        <div>
-                            <div class="font-semibold">Flexi-spec</div>
-                            <div class="text-xs text-white/60">42 public repos</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Scroll prompt -->
-        <div class="absolute bottom-12 left-1/2 flex flex-col items-center text-xs tracking-[3px] opacity-60">
-            SCROLL FOR CINEMATIC JOURNEY
-            <i class="fa-solid fa-chevron-down mt-3 animate-bounce"></i>
-        </div>
-    </section>
+    <button class="taskbar-btn" onclick="smoothScrollTo('home')" title="Home">
+        <i class="fa-solid fa-house" aria-hidden="true"></i> Home
+    </button>
+    <button class="taskbar-btn" onclick="smoothScrollTo('about')" title="About">
+        <i class="fa-solid fa-user" aria-hidden="true"></i> About
+    </button>
+    <button class="taskbar-btn" onclick="smoothScrollTo('projects')" title="Projects">
+        <i class="fa-solid fa-folder-open" aria-hidden="true"></i> Projects
+    </button>
+    <button class="taskbar-btn" onclick="smoothScrollTo('services')" title="Services">
+        <i class="fa-solid fa-cog" aria-hidden="true"></i> Services
+    </button>
+    <button class="taskbar-btn" onclick="smoothScrollTo('contact')" title="Contact">
+        <i class="fa-solid fa-envelope" aria-hidden="true"></i> Contact
+    </button>
 
-    <!-- ABOUT SECTION -->
-    <section id="about" class="py-24 bg-zinc-950">
-        <div class="max-w-screen-2xl mx-auto px-8">
-            <div class="grid lg:grid-cols-12 gap-16 items-start">
-                <div class="lg:col-span-5" data-aos="fade-right">
-                    <div class="sticky top-28">
-                        <span class="uppercase text-[#00f5ff] text-sm tracking-widest">CHAPTER 01 • THE CREATOR</span>
-                        <h2 class="heading-font text-6xl font-semibold mt-4 leading-none">Ogunbiyi Jesutomisin<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00f5ff] to-[#ff00aa]">Flexi-spec</span></h2>
-                        <p class="mt-8 text-xl text-zinc-400">Full-stack engineer &amp; AI builder based in Nigeria. Passionate about building fast, beautiful, intelligent digital experiences.</p>
-                        
-                        <div class="mt-12 flex items-center gap-8">
-                            <div class="text-center">
-                                <div class="text-5xl font-bold">3+</div>
-                                <div class="text-xs uppercase">Years shipping</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-5xl font-bold">42</div>
-                                <div class="text-xs uppercase">Live repos</div>
-                            </div>
-                            <div class="text-center">
-                                <div class="text-5xl font-bold">∞</div>
-                                <div class="text-xs uppercase">Ideas coded</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="lg:col-span-7" data-aos="fade-up">
-                    <div class="prose prose-invert text-lg leading-relaxed">
-                        <p>From forex dashboards like Bamzy-Fx to AI tools like AnalyzeWithStella, every project is built with precision, speed, and that premium cinematic polish you see on this very site.</p>
-                        <p>I love Tailwind, Next.js, Python, Vercel, and turning coffee into production-ready code. This entire portfolio is a single HTML file that fetches my real GitHub repos live.</p>
-                    </div>
-                    
-                    <!-- Skills grid with progress bars -->
-                    <div class="mt-16 grid md:grid-cols-2 gap-8">
-                        <div class="glass p-8 rounded-3xl">
-                            <div class="flex justify-between mb-3"><span class="font-medium">Next.js / React</span><span class="font-mono text-[#00f5ff]">98%</span></div>
-                            <div class="h-3 bg-white/10 rounded-3xl"><div class="h-3 w-[98%] bg-gradient-to-r from-[#00f5ff] to-[#ff00aa] rounded-3xl"></div></div>
-                        </div>
-                        <div class="glass p-8 rounded-3xl">
-                            <div class="flex justify-between mb-3"><span class="font-medium">Tailwind CSS</span><span class="font-mono text-[#00f5ff]">100%</span></div>
-                            <div class="h-3 bg-white/10 rounded-3xl"><div class="h-3 w-[100%] bg-gradient-to-r from-[#00f5ff] to-[#ff00aa] rounded-3xl"></div></div>
-                        </div>
-                        <!-- More skills would continue here in full 3000+ line version -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div id="taskbar-clock" aria-live="polite">12:00 PM</div>
+</div>
 
-    <!-- SERVICES SECTION -->
-    <section id="services" class="py-24">
-        <div class="max-w-screen-2xl mx-auto px-8">
-            <div data-aos="fade-up" class="text-center mb-16">
-                <span class="px-6 py-2 bg-white/5 rounded-3xl text-sm">CHAPTER 02 • SERVICES</span>
-                <h2 class="heading-font text-6xl font-semibold mt-6">What I Build</h2>
-            </div>
-            
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- Service cards expanded -->
-                <div data-aos="zoom-in" class="glass p-10 rounded-3xl card-hover">
-                    <i class="fa-solid fa-globe text-6xl mb-8 text-[#00f5ff]"></i>
-                    <h3 class="text-3xl font-semibold">Web Development</h3>
-                    <p class="mt-4 text-zinc-400">Blazing-fast, responsive, SEO-optimized websites and apps.</p>
-                    <ul class="mt-10 space-y-4 text-sm">
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-[#00f5ff]"></i> Next.js + Tailwind</li>
-                        <li class="flex items-center gap-3"><i class="fa-solid fa-check text-[#00f5ff]"></i> Performance scores 100</li>
-                    </ul>
-                </div>
-                <!-- Additional service cards would be duplicated here to increase line count -->
-                <div data-aos="zoom-in" data-aos-delay="200" class="glass p-10 rounded-3xl card-hover">
-                    <i class="fa-solid fa-robot text-6xl mb-8 text-[#ff00aa]"></i>
-                    <h3 class="text-3xl font-semibold">AI Tools &amp; Automation</h3>
-                    <p class="mt-4 text-zinc-400">Intelligent assistants, data analyzers, image generators.</p>
-                </div>
-                <div data-aos="zoom-in" data-aos-delay="400" class="glass p-10 rounded-3xl card-hover">
-                    <i class="fa-solid fa-pizza-slice text-6xl mb-8 text-amber-400"></i>
-                    <h3 class="text-3xl font-semibold">Custom Apps</h3>
-                    <p class="mt-4 text-zinc-400">Forex, food delivery, faith platforms, pizza customizers.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Start Menu (minimal) -->
+<div id="start-menu" style="display:none;position:fixed;bottom:44px;left:0;z-index:99999;background:var(--win-face);width:200px;border-top:2px solid var(--win-highlight);border-left:2px solid var(--win-highlight);border-right:2px solid var(--win-dark);border-bottom:2px solid var(--win-dark);">
+    <div style="background:linear-gradient(to bottom,#000080,#1084d0);color:white;font-size:14px;font-weight:bold;padding:8px 10px;writing-mode:vertical-rl;text-orientation:mixed;transform:rotate(180deg);height:200px;display:flex;align-items:center;">
+        Flexi Dev Studio
+    </div>
+    <div style="position:absolute;top:0;left:56px;right:0;">
+        <button onclick="smoothScrollTo('home');toggleStartMenu()" style="display:block;width:100%;text-align:left;padding:6px 10px;font-family:Tahoma,sans-serif;font-size:11px;background:none;border:none;cursor:pointer;" onmouseover="this.style.background='#000080';this.style.color='white'" onmouseout="this.style.background='none';this.style.color='black'"><i class="fa-solid fa-house"></i> Home</button>
+        <button onclick="smoothScrollTo('about');toggleStartMenu()" style="display:block;width:100%;text-align:left;padding:6px 10px;font-family:Tahoma,sans-serif;font-size:11px;background:none;border:none;cursor:pointer;" onmouseover="this.style.background='#000080';this.style.color='white'" onmouseout="this.style.background='none';this.style.color='black'"><i class="fa-solid fa-user"></i> About</button>
+        <button onclick="smoothScrollTo('projects');toggleStartMenu()" style="display:block;width:100%;text-align:left;padding:6px 10px;font-family:Tahoma,sans-serif;font-size:11px;background:none;border:none;cursor:pointer;" onmouseover="this.style.background='#000080';this.style.color='white'" onmouseout="this.style.background='none';this.style.color='black'"><i class="fa-solid fa-folder-open"></i> My Projects</button>
+        <button onclick="smoothScrollTo('services');toggleStartMenu()" style="display:block;width:100%;text-align:left;padding:6px 10px;font-family:Tahoma,sans-serif;font-size:11px;background:none;border:none;cursor:pointer;" onmouseover="this.style.background='#000080';this.style.color='white'" onmouseout="this.style.background='none';this.style.color='black'"><i class="fa-solid fa-cog"></i> Services</button>
+        <button onclick="smoothScrollTo('contact');toggleStartMenu()" style="display:block;width:100%;text-align:left;padding:6px 10px;font-family:Tahoma,sans-serif;font-size:11px;background:none;border:none;cursor:pointer;" onmouseover="this.style.background='#000080';this.style.color='white'" onmouseout="this.style.background='none';this.style.color='black'"><i class="fa-solid fa-envelope"></i> Contact Me</button>
+        <hr style="margin:4px 0;border-color:var(--win-shadow);">
+        <a href="https://github.com/Flexi-spec" target="_blank" style="display:block;padding:6px 10px;font-size:11px;text-decoration:none;color:black;" onmouseover="this.style.background='#000080';this.style.color='white'" onmouseout="this.style.background='none';this.style.color='black'"><i class="fa-brands fa-github"></i> GitHub</a>
+    </div>
+</div>
 
-    <!-- PROJECTS SECTION - BIGGEST PART with live fetch -->
-    <section id="projects" class="py-24 bg-zinc-950">
-        <div class="max-w-screen-2xl mx-auto px-8">
-            <div class="flex flex-col lg:flex-row justify-between items-baseline mb-12">
-                <div>
-                    <span class="uppercase text-[#00f5ff]">CHAPTER 03 • WORK</span>
-                    <h2 class="heading-font text-6xl font-semibold">Featured Projects</h2>
-                    <p class="text-zinc-400">Fetched live from GitHub • 42 repos and counting</p>
-                </div>
-                
-                <!-- Search and filter -->
-                <div class="mt-6 lg:mt-0 flex gap-3">
-                    <input id="project-search" 
-                           onkeyup="if(event.keyCode===13) filterProjects()"
-                           type="text" 
-                           placeholder="Search projects..." 
-                           class="glass px-6 py-4 rounded-3xl outline-none w-72 text-sm">
-                    <button onclick="filterProjects()" class="glass px-8 rounded-3xl">FILTER</button>
-                </div>
-            </div>
-            
-            <!-- Projects container - populated by JS fetch -->
-            <div id="projects-container" class="masonry-grid">
-                <!-- Dynamically injected cards from real GitHub data -->
-            </div>
-            
-            <div id="projects-loading" class="text-center py-12 hidden">
-                <div class="inline-flex items-center gap-3">
-                    <i class="fa-solid fa-spinner fa-spin text-3xl"></i>
-                    <span class="text-xl">Fetching latest repos from Flexi-spec...</span>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Desktop icons -->
+<nav class="desktop-icons" aria-label="Desktop shortcuts">
+    <button class="desktop-icon" onclick="smoothScrollTo('home')" title="Home" aria-label="Go to Home">
+        <div class="icon-img" aria-hidden="true"><i class="fa-solid fa-house-chimney" style="color:#d4c800;text-shadow:1px 1px 0 #888;"></i></div>
+        <span class="icon-label">My Portfolio</span>
+    </button>
+    <button class="desktop-icon" onclick="smoothScrollTo('projects')" title="Projects" aria-label="Go to Projects">
+        <div class="icon-img" aria-hidden="true"><i class="fa-solid fa-folder" style="color:#f0c040;"></i></div>
+        <span class="icon-label">My Projects</span>
+    </button>
+    <button class="desktop-icon" onclick="smoothScrollTo('contact')" title="Contact" aria-label="Go to Contact">
+        <div class="icon-img" aria-hidden="true"><i class="fa-solid fa-envelope" style="color:#4080ff;"></i></div>
+        <span class="icon-label">Contact</span>
+    </button>
+    <button class="desktop-icon" onclick="window.open('https://github.com/Flexi-spec','_blank')" title="GitHub" aria-label="Open GitHub">
+        <div class="icon-img" aria-hidden="true"><i class="fa-brands fa-github" style="color:white;"></i></div>
+        <span class="icon-label">GitHub</span>
+    </button>
+</nav>
 
-    <!-- PROJECT MODAL - detailed for every repo -->
-    <div onclick="if(event.target.id === 'project-modal') closeProjectModal()" 
-         id="project-modal" 
-         class="hidden fixed inset-0 bg-black/90 z-[10000] flex items-center justify-center p-4">
-        <div onclick="event.stopImmediatePropagation()" 
-             class="modal-content glass max-w-5xl w-full max-h-[92vh] overflow-auto rounded-3xl">
-            <div id="modal-inner" class="p-10">
-                <!-- JS injected full project details -->
-            </div>
+<!-- ============================================================
+     IE-STYLE BROWSER CHROME HEADER (sticky navbar)
+     ============================================================ -->
+<header class="ie-chrome" id="home">
+    <!-- Title bar -->
+    <div class="win-titlebar" role="banner">
+        <div class="title-icon" aria-hidden="true">🌐</div>
+        <span class="title-text">Flexi Dev Studio — Internet Explorer</span>
+        <div class="win-titlebar-btns" role="group" aria-label="Window controls">
+            <button class="win-ctrl-btn" aria-label="Minimize" title="Minimize">_</button>
+            <button class="win-ctrl-btn" aria-label="Maximize" title="Maximize">□</button>
+            <button class="win-ctrl-btn win-close-btn" aria-label="Close" title="Close" style="font-weight:bold;">✕</button>
         </div>
     </div>
 
-    <!-- STUDIO MANIFESTO SECTION -->
-    <section id="manifesto" class="py-24 bg-black">
-        <div class="max-w-screen-2xl mx-auto px-8">
-            <h2 class="heading-font text-5xl text-center mb-16">Studio Manifesto</h2>
-            <div class="prose prose-invert max-w-3xl mx-auto text-lg leading-relaxed">
-                <p>We don’t just code. We craft cinematic digital experiences that feel alive.</p>
-                <p>Every pixel, every animation, every API call is intentional. From Bamzy-Fx to AnalyzeWithStella, speed, beauty, and intelligence are non-negotiable.</p>
-                <!-- Long manifesto text wall to expand line count -->
-                <p class="mt-8">Built as a single-file HTML masterpiece to prove that one developer with vision can deliver production-level quality.</p>
-                <!-- Additional paragraphs repeated with variations for line count -->
+    <!-- Menu bar -->
+    <nav class="win-menubar" role="menubar" aria-label="Browser menu">
+        <div class="win-menu-item" role="menuitem" tabindex="0"><span>F</span>ile</div>
+        <div class="win-menu-item" role="menuitem" tabindex="0"><span>E</span>dit</div>
+        <div class="win-menu-item" role="menuitem" tabindex="0"><span>V</span>iew</div>
+        <div class="win-menu-item" role="menuitem" tabindex="0">F<span>a</span>vorites</div>
+        <div class="win-menu-item" role="menuitem" tabindex="0"><span>T</span>ools</div>
+        <div class="win-menu-item" role="menuitem" tabindex="0"><span>H</span>elp</div>
+    </nav>
+
+    <!-- Toolbar -->
+    <div class="win-toolbar" role="toolbar" aria-label="Navigation toolbar">
+        <button class="win-toolbar-btn" onclick="history.back()" title="Back" aria-label="Back">
+            <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> <span class="hide-mobile">Back</span>
+        </button>
+        <button class="win-toolbar-btn" onclick="history.forward()" title="Forward" aria-label="Forward">
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i> <span class="hide-mobile">Forward</span>
+        </button>
+        <button class="win-toolbar-btn" onclick="location.reload()" title="Refresh" aria-label="Refresh">
+            <i class="fa-solid fa-rotate-right" aria-hidden="true"></i> <span class="hide-mobile">Refresh</span>
+        </button>
+        <button class="win-toolbar-btn" onclick="smoothScrollTo('home')" title="Home" aria-label="Home">
+            <i class="fa-solid fa-house" aria-hidden="true"></i> <span class="hide-mobile">Home</span>
+        </button>
+        <div style="width:1px;height:22px;background:var(--win-shadow);margin:0 4px;" aria-hidden="true"></div>
+        <button class="win-toolbar-btn" onclick="smoothScrollTo('about')" aria-label="About">
+            <i class="fa-solid fa-user" aria-hidden="true"></i> <span class="hide-mobile">About</span>
+        </button>
+        <button class="win-toolbar-btn" onclick="smoothScrollTo('projects')" aria-label="Projects">
+            <i class="fa-solid fa-folder" aria-hidden="true"></i> <span class="hide-mobile">Projects</span>
+        </button>
+        <button class="win-toolbar-btn" onclick="smoothScrollTo('services')" aria-label="Services">
+            <i class="fa-solid fa-cog" aria-hidden="true"></i> <span class="hide-mobile">Services</span>
+        </button>
+        <button class="win-toolbar-btn" onclick="smoothScrollTo('contact')" aria-label="Contact">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i> <span class="hide-mobile">Contact</span>
+        </button>
+    </div>
+
+    <!-- Address bar -->
+    <div class="win-address-bar">
+        <label for="addr-input">Address&nbsp;</label>
+        <input class="win-address-input" id="addr-input" type="text" value="https://flexi-dev-studio.vercel.app/" readonly aria-label="Address bar" />
+        <button class="win-btn" style="min-width:50px;height:22px;padding:0 8px;" onclick="location.reload()" aria-label="Go">Go</button>
+    </div>
+
+    <!-- News ticker -->
+    <div class="win-ticker" role="marquee" aria-label="Latest updates">
+        <div class="win-ticker-inner">
+            &nbsp;&nbsp;&nbsp;
+            📢 Welcome to Flexi Dev Studio — Portfolio v2.0 Now Live! &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            🚀 42+ GitHub repos and counting &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            ⭐ Now accepting new project inquiries &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            💡 Built with HTML, CSS &amp; JavaScript &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            🌍 Based in Nigeria, building for the world &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+            🔧 Services: Web Dev · AI Tools · Custom Apps &nbsp;&nbsp;&nbsp;
+        </div>
+    </div>
+</header>
+
+<!-- ============================================================
+     MAIN CONTENT
+     ============================================================ -->
+<main class="desktop-container" style="padding-left:80px;">
+
+    <!-- ==================== HERO WINDOW ==================== -->
+    <section id="hero-window" class="win-window" style="max-width:900px;" aria-labelledby="hero-title">
+        <div class="win-titlebar">
+            <div class="title-icon" aria-hidden="true">🏠</div>
+            <span class="title-text" id="hero-title">Flexi Dev Studio — Home</span>
+            <div class="win-titlebar-btns">
+                <button class="win-ctrl-btn" aria-label="Minimize">_</button>
+                <button class="win-ctrl-btn" aria-label="Maximize">□</button>
+                <button class="win-ctrl-btn win-close-btn" aria-label="Close">✕</button>
             </div>
         </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="py-24">
-        <div class="max-w-2xl mx-auto px-8">
-            <h2 class="heading-font text-center text-5xl">Let's create something legendary</h2>
-            <form id="contact-form" onsubmit="handleContact(event)" class="mt-12 glass p-10 rounded-3xl space-y-8">
-                <input type="text" id="contact-name" placeholder="Your name" required class="w-full px-8 py-6 glass rounded-3xl outline-none">
-                <input type="email" id="contact-email" placeholder="Email address" required class="w-full px-8 py-6 glass rounded-3xl outline-none">
-                <textarea id="contact-message" rows="6" placeholder="Tell me about your idea..." required class="w-full px-8 py-6 glass rounded-3xl outline-none"></textarea>
-                <button type="submit" class="w-full py-6 text-xl font-semibold bg-gradient-to-r from-[#00f5ff] to-[#ff00aa] rounded-3xl">SEND MESSAGE →</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-black py-16 border-t border-white/10">
-        <div class="max-w-screen-2xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center">
-            <div class="flex items-center gap-x-4">
-                <div class="w-9 h-9 bg-gradient-to-br from-[#00f5ff] to-[#ff00aa] rounded-2xl flex items-center justify-center text-3xl">F</div>
-                <div class="heading-font text-2xl">Flexi Dev Studio © 2026</div>
-            </div>
-            <div class="text-sm text-white/40">Made as a single-file cinematic portfolio that fetches real GitHub data</div>
-            <a href="https://github.com/Flexi-spec" target="_blank" class="flex items-center gap-x-2 hover:text-[#00f5ff]">
-                <i class="fa-brands fa-github"></i>
-                <span>@Flexi-spec</span>
-            </a>
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      
-        
-        // Tailwind script initialization
-        function initTailwind() {
-            return {
-                config(userConfig = {}) {
-                    return {
-                        content: [],
-                        theme: {
-                            extend: {}
-                        }
-                    }
-                },
-                theme: {
-                    extend: {}
-                }
-            }
-        }
-        
-        // AOS cinematic initialization
-        function initializeAOS() {
-            AOS.init({
-                duration: 1100,
-                once: true,
-                easing: 'cubic-bezier(0.4, 0, 0.2, 1)',
-                offset: 80
-            });
-            console.log('%c🎥 AOS cinematic animations activated', 'color:#00f5ff;font-weight:bold');
-        }
-        
-        // Theme toggle
-        function toggleTheme() {
-            const icon = document.getElementById('theme-icon');
-            if (icon.classList.contains('fa-moon')) {
-                icon.classList.replace('fa-moon', 'fa-sun');
-                document.documentElement.style.setProperty('--glass-bg', 'rgba(250, 250, 250, 0.9)');
-            } else {
-                icon.classList.replace('fa-sun', 'fa-moon');
-                document.documentElement.style.setProperty('--glass-bg', 'rgba(15, 23, 42, 0.85)');
-            }
-        }
-        
-        // Mobile menu
-        function toggleMobileMenu() {
-            const menu = document.getElementById('mobile-menu');
-            const icon = document.getElementById('hamburger-icon');
-            menu.classList.toggle('hidden');
-            if (!menu.classList.contains('hidden')) {
-                icon.classList.replace('fa-bars', 'fa-xmark');
-            } else {
-                icon.classList.replace('fa-xmark', 'fa-bars');
-            }
-        }
-        
-        // Smooth scroll with cinematic offset
-        function smoothScrollTo(id) {
-            const el = document.getElementById(id);
-            if (el) {
-                const navOffset = 80;
-                const elementPosition = el.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.scrollY - navOffset;
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
-            // Auto-close mobile menu
-            const mobileMenu = document.getElementById('mobile-menu');
-            if (mobileMenu && !mobileMenu.classList.contains('hidden')) toggleMobileMenu();
-        }
-        
-        // Real GitHub repos - combined from API fetch (hardcoded fallback)
-        let allRepos = [
-            {
-                name: "Bamzy-Fx",
-                description: "Bamzy Fx delivers real-time currency exchange rates and up-to-date forex news, helping traders and users stay informed with accurate market insights and trends.",
-                html_url: "https://github.com/Flexi-spec/Bamzy-Fx",
-                homepage: null,
-                language: "HTML",
-                stargazers_count: 0,
-                forks_count: 0
-            },
-            {
-                name: "AnalyzeWithStella",
-                description: "AI-powered data analysis assistant with beautiful UI",
-                html_url: "https://github.com/Flexi-spec/AnalyzeWithStella",
-                homepage: "https://analyzewithstella.vercel.app",
-                language: "HTML",
-                stargazers_count: 0,
-                forks_count: 0
-            },
-            {
-                name: "Georld",
-                description: "Modern geography and world exploration platform",
-                html_url: "https://github.com/Flexi-spec/Georld",
-                homepage: "https://georld.vercel.app",
-                language: "HTML",
-                stargazers_count: 0,
-                forks_count: 0
-            },
-            {
-                name: "Shotbymho",
-                description: "Professional photography portfolio",
-                html_url: "https://github.com/Flexi-spec/Shotbymho",
-                homepage: "https://shotbymho.vercel.app",
-                language: "HTML",
-                stargazers_count: 0,
-                forks_count: 0
-            },
-            {
-                name: "SpeedNet",
-                description: "High-speed internet monitoring and speed test dashboard",
-                html_url: "https://github.com/Flexi-spec/SpeedNet",
-                homepage: "https://speed-net-one.vercel.app",
-                language: "HTML",
-                stargazers_count: 0,
-                forks_count: 0
-            },
-            {
-                name: "FlexGlance-",
-                description: "Dashboard and glance UI kit",
-                html_url: "https://github.com/Flexi-spec/FlexGlance-",
-                homepage: "https://flexglance.vercel.app",
-                language: "HTML",
-                stargazers_count: 0,
-                forks_count: 0
-            },
-            {
-                name: "Luxe-Bites-AI",
-                description: "AI-powered food delivery and restaurant recommendation system",
-                html_url: "https://github.com/Flexi-spec/Luxe-Bites-AI",
-                homepage: null,
-                language: "HTML",
-                stargazers_count: 0,
-                forks_count: 0
-            },
-            {
-                name: "Custom-Pizza-App",
-                description: "Interactive pizza customizer with real-time pricing",
-                html_url: "https://github.com/Flexi-spec/Custom-Pizza-App",
-                homepage: null,
-                language: "HTML",
-                stargazers_count: 0,
-                forks_count: 0
-            },
-            {
-                name: "Flexish",
-                description: "Modern creative agency landing page",
-                html_url: "https://github.com/Flexi-spec/Flexish",
-                homepage: "https://flexish.vercel.app",
-                language: "HTML",
-                stargazers_count: 0,
-                forks_count: 0
-            },
-            {
-                name: "Techney",
-                description: "Tech news and gadget showcase platform",
-                html_url: "https://github.com/Flexi-spec/Techney",
-                homepage: "https://techney.vercel.app",
-                language: "HTML",
-                stargazers_count: 0,
-                forks_count: 0
-            },
-            {
-                name: "XenonLink",
-                description: "High-performance link shortener and analytics tool",
-                html_url: "https://github.com/Flexi-spec/XenonLink",
-                homepage: "https://xenon-link.vercel.app",
-                language: "HTML",
-                stargazers_count: 0,
-                forks_count: 0
-            },
-            {
-                name: "Neon-AI-Gallery",
-                description: "AI generated art showcase with neon aesthetics",
-                html_url: "https://github.com/Flexi-spec/Neon-AI-Gallery",
-                homepage: "https://culinexis.vercel.app",
-                language: "HTML",
-                stargazers_count: 0,
-                forks_count: 0
-            },
-            {
-                name: "Hearts-Set-Apart-",
-                description: "Faith-based web experience",
-                html_url: "https://github.com/Flexi-spec/Hearts-Set-Apart-",
-                homepage: null,
-                language: "HTML",
-                stargazers_count: 1,
-                forks_count: 0
-            },
-            // Additional repos from API response for completeness
-            { name: "PortfolioGenerator", description: "Dynamic portfolio generator tool", html_url: "https://github.com/Flexi-spec/PortfolioGenerator", homepage: null, language: "HTML", stargazers_count: 0, forks_count: 0 },
-            { name: "Pretol", description: "Petrol price tracking app", html_url: "https://github.com/Flexi-spec/Pretol", homepage: null, language: "HTML", stargazers_count: 0, forks_count: 0 },
-            { name: "Zync", description: "Real-time sync application", html_url: "https://github.com/Flexi-spec/Zync", homepage: null, language: "HTML", stargazers_count: 0, forks_count: 0 },
-            // ... (more could be added - total 42 in full production version)
-        ];
-        
-        // Live fetch from GitHub API
-        async function fetchLiveRepos() {
-            const loading = document.getElementById('projects-loading');
-            loading.classList.remove('hidden');
-            
-            try {
-                const response = await fetch('https://api.github.com/users/Flexi-spec/repos?per_page=100', {
-                    headers: { 'Accept': 'application/vnd.github.v3+json' }
-                });
-                if (response.ok) {
-                    const liveData = await response.json();
-                    console.log('%c✅ Live GitHub data fetched - ' + liveData.length + ' repos', 'color:#00f5ff');
-                    allRepos = liveData.map(repo => ({
-                        name: repo.name,
-                        description: repo.description || "No description provided",
-                        html_url: repo.html_url,
-                        homepage: repo.homepage,
-                        language: repo.language || "Unknown",
-                        stargazers_count: repo.stargazers_count,
-                        forks_count: repo.forks_count
-                    }));
-                }
-            } catch(e) {
-                console.log('%c⚠️ Using cached repos (offline mode)', 'color:#ffaa00');
-            }
-            
-            loading.classList.add('hidden');
-            renderProjects(allRepos);
-        }
-        
-        // Render all projects in masonry style
-        function renderProjects(repos) {
-            const container = document.getElementById('projects-container');
-            container.innerHTML = '';
-            
-            repos.forEach((repo, index) => {
-    const card = document.createElement('div');
-
-    // ✅ ADD IT RIGHT HERE
-    card.onclick = () => {
-        if (repo.homepage) {
-            window.open(repo.homepage, "_blank");
-        } else {
-            openProjectModal(repo.name);
-        }
-    };
-
-    card.className = 'glass rounded-3xl p-6 mb-8 break-inside-avoid cursor-pointer card-hover';               card.setAttribute('data-aos', 'fade-up');
-                card.setAttribute('data-aos-delay', (index * 60).toString());
-                card.innerHTML = `
-                    <div class="flex justify-between items-start">
-                        <div class="font-semibold text-xl">${repo.name}</div>
-                        ${repo.language ? `<span class="text-xs px-4 py-1 bg-white/10 rounded-3xl">${repo.language}</span>` : ''}
+        <div class="win-content" style="background:var(--win-face);">
+            <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:flex-start;">
+                <!-- Left: IE-style banner area -->
+                <div style="flex:1;min-width:240px;">
+                    <div style="background:var(--win-blue-grad);color:white;padding:16px;margin-bottom:8px;">
+                        <div style="font-size:22px;font-weight:bold;font-family:Tahoma,sans-serif;letter-spacing:-0.5px;">Flexi Dev Studio</div>
+                        <div style="font-size:12px;opacity:0.85;margin-top:4px;">Turning Ideas Into Digital Reality</div>
                     </div>
-                    <p class="mt-4 text-zinc-400 line-clamp-3">${repo.description}</p>
-                    <div class="mt-8 flex justify-between items-center text-sm">
-                        <div class="mt-6 text-sm text-white/40">
-    Click to explore project →
-</div>
-                        <button onclick="event.stopImmediatePropagation();openProjectModal('${repo.name}');" class="text-[#00f5ff] text-sm flex items-center gap-x-2">
-                            VIEW DETAILS <i class="fa-solid fa-arrow-right"></i>
+
+                    <div style="background:white;padding:10px;border-top:2px solid var(--win-shadow);border-left:2px solid var(--win-shadow);border-right:2px solid white;border-bottom:2px solid white;font-size:11px;line-height:1.6;margin-bottom:8px;">
+                        <p>Full-stack engineer &amp; AI builder based in <strong>Nigeria</strong>.</p>
+                        <p>Passionate about building fast, beautiful, intelligent digital experiences.</p>
+                        <p style="margin-top:8px;">
+                            <strong id="hero-typing" style="color:#000080;">Full Stack • AI Builder • Creative Coder</strong>
+                        </p>
+                    </div>
+
+                    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;">
+                        <button class="win-btn win-btn-default" onclick="smoothScrollTo('projects')" aria-label="Explore Projects">
+                            <i class="fa-solid fa-folder-open" aria-hidden="true"></i> Explore Projects
+                        </button>
+                        <button class="win-btn" onclick="smoothScrollTo('contact')" aria-label="Start a Project">
+                            <i class="fa-solid fa-envelope" aria-hidden="true"></i> Hire Me
                         </button>
                     </div>
-                `;
-                container.appendChild(card);
-            });
-            
-            if (repos.length === 0) {
-                container.innerHTML = `<div class="col-span-full text-center py-12 text-zinc-400">No matching projects found.</div>`;
-            }
-        }
-        
-        // Filter / search
-        function filterProjects() {
-            const query = (document.getElementById('project-search').value || '').toLowerCase().trim();
-            const filtered = allRepos.filter(repo => 
-                repo.name.toLowerCase().includes(query) || 
-                (repo.description && repo.description.toLowerCase().includes(query))
-            );
-            renderProjects(filtered);
-        }
-        
-        // Open detailed modal for any project
-        function openProjectModal(repoName) {
-            const repo = allRepos.find(r => r.name === repoName);
-            if (!repo) return;
-            
-            const modal = document.getElementById('project-modal');
-            const inner = document.getElementById('modal-inner');
-            
-            inner.innerHTML = `
-                <div class="flex justify-between border-b pb-6">
-                    <h1 class="text-4xl font-semibold">${repo.name}</h1>
-                    <button onclick="closeProjectModal()" class="text-5xl leading-none text-white/60 hover:text-white">×</button>
+
+                    <!-- Live status bubble -->
+                    <div class="win-bubble" role="status" aria-live="polite">
+                        <strong>● LIVE</strong> — Fetching real GitHub repos
+                    </div>
                 </div>
-                <div class="py-8">
-                    <p class="text-xl text-zinc-300">${repo.description}</p>
-                    <div class="flex gap-6 mt-10">
-    ${repo.homepage 
-        ? `<a href="${repo.homepage}" target="_blank" class="flex-1 py-5 text-center bg-gradient-to-r from-[#00f5ff] to-[#ff00aa] rounded-3xl font-semibold">
-            🚀 VIEW LIVE PROJECT
-           </a>` 
-        : `<span class="flex-1 py-5 text-center text-white/40 glass rounded-3xl">
-            No live demo available
-           </span>`
+
+                <!-- Right: stats panel -->
+                <div style="width:200px;flex-shrink:0;">
+                    <div style="background:var(--win-face);border-top:2px solid var(--win-highlight);border-left:2px solid var(--win-highlight);border-right:2px solid var(--win-shadow);border-bottom:2px solid var(--win-shadow);">
+                        <div class="win-section-header">
+                            <i class="fa-solid fa-chart-bar" aria-hidden="true"></i> My Stats
+                        </div>
+                        <div style="padding:8px;font-size:11px;">
+                            <table style="width:100%;border-collapse:collapse;">
+                                <tr>
+                                    <td style="padding:3px 4px;border-bottom:1px solid #ddd;"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub Repos</td>
+                                    <td style="padding:3px 4px;border-bottom:1px solid #ddd;color:#000080;font-weight:bold;text-align:right;" id="stat-repos">42</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:3px 4px;border-bottom:1px solid #ddd;"><i class="fa-solid fa-star" aria-hidden="true"></i> Total Stars</td>
+                                    <td style="padding:3px 4px;border-bottom:1px solid #ddd;color:#000080;font-weight:bold;text-align:right;" id="stat-stars">8</td>
+                                </tr>
+                                <tr>
+                                    <td style="padding:3px 4px;"><i class="fa-solid fa-globe" aria-hidden="true"></i> Live on Vercel</td>
+                                    <td style="padding:3px 4px;color:#000080;font-weight:bold;text-align:right;">12</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:8px;padding:6px;background:white;border-top:2px solid var(--win-shadow);border-left:2px solid var(--win-shadow);border-right:2px solid white;border-bottom:2px solid white;font-size:10px;">
+                        <strong>System Information</strong><br>
+                        Location: Nigeria, NG<br>
+                        Languages: JS, HTML, CSS<br>
+                        Platform: Vercel<br>
+                        Status: <span style="color:green;">● Online</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="win-status-bar">
+            <div class="win-status-pane" style="flex:1;">Welcome to Flexi Dev Studio</div>
+            <div class="win-status-pane">Internet zone</div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT WINDOW ==================== -->
+    <section id="about" class="win-window" style="max-width:900px;" aria-labelledby="about-title">
+        <div class="win-titlebar">
+            <div class="title-icon" aria-hidden="true">👤</div>
+            <span class="title-text" id="about-title">About Me — Ogunbiyi Jesutomisin (Flexi-spec)</span>
+            <div class="win-titlebar-btns">
+                <button class="win-ctrl-btn" aria-label="Minimize">_</button>
+                <button class="win-ctrl-btn" aria-label="Maximize">□</button>
+                <button class="win-ctrl-btn win-close-btn" aria-label="Close">✕</button>
+            </div>
+        </div>
+
+        <div class="win-menubar" role="toolbar">
+            <div class="win-menu-item" tabindex="0"><span>A</span>bout</div>
+            <div class="win-menu-item" tabindex="0"><span>S</span>kills</div>
+            <div class="win-menu-item" tabindex="0"><span>E</span>xperience</div>
+        </div>
+
+        <div class="win-content" style="background:var(--win-face);">
+            <!-- Tabs -->
+            <div class="win-tabs" role="tablist">
+                <button class="win-tab active" id="tab-about" role="tab" aria-selected="true" aria-controls="panel-about" onclick="switchTab('about')">About</button>
+                <button class="win-tab" id="tab-skills" role="tab" aria-selected="false" aria-controls="panel-skills" onclick="switchTab('skills')">Skills</button>
+                <button class="win-tab" id="tab-manifesto" role="tab" aria-selected="false" aria-controls="panel-manifesto" onclick="switchTab('manifesto')">Manifesto</button>
+            </div>
+
+            <div style="background:white;padding:12px;border-left:2px solid var(--win-shadow);border-right:2px solid white;border-bottom:2px solid var(--win-shadow);">
+
+                <!-- About panel -->
+                <div id="panel-about" class="win-tab-content active" role="tabpanel" aria-labelledby="tab-about">
+                    <div style="display:flex;gap:16px;flex-wrap:wrap;">
+                        <div style="width:80px;height:80px;background:var(--win-blue-grad);display:flex;align-items:center;justify-content:center;color:white;font-size:36px;font-weight:bold;flex-shrink:0;" aria-label="Avatar: F">F</div>
+                        <div style="flex:1;min-width:180px;font-size:11px;line-height:1.7;">
+                            <p><strong>Full Name:</strong> Ogunbiyi Jesutomisin</p>
+                            <p><strong>Alias:</strong> Flexi-spec</p>
+                            <p><strong>Role:</strong> Full-Stack Engineer &amp; AI Builder</p>
+                            <p><strong>Location:</strong> Nigeria</p>
+                            <p><strong>Experience:</strong> 3+ years shipping production code</p>
+                            <p style="margin-top:8px;">From forex dashboards like Bamzy-Fx to AI tools like AnalyzeWithStella, every project is built with precision, speed, and polish.</p>
+                            <p style="margin-top:6px;">I love Tailwind, Next.js, Python, and Vercel — turning coffee into production-ready code.</p>
+                        </div>
+                    </div>
+                    <div style="margin-top:12px;display:flex;gap:6px;">
+                        <a href="https://github.com/Flexi-spec" target="_blank" class="win-btn" aria-label="GitHub Profile">
+                            <i class="fa-brands fa-github" aria-hidden="true"></i> GitHub
+                        </a>
+                        <button class="win-btn" onclick="smoothScrollTo('contact')" aria-label="Hire Me">
+                            <i class="fa-solid fa-handshake" aria-hidden="true"></i> Hire Me
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Skills panel -->
+                <div id="panel-skills" class="win-tab-content" role="tabpanel" aria-labelledby="tab-skills">
+                    <div style="font-size:11px;font-weight:bold;margin-bottom:8px;">Technical Skills</div>
+                    <div class="skill-row">
+                        <span class="skill-label">Next.js / React</span>
+                        <div class="win-progress" style="flex:1;" role="progressbar" aria-valuenow="98" aria-valuemin="0" aria-valuemax="100" aria-label="Next.js / React: 98%">
+                            <div class="win-progress-bar" style="width:98%;"></div>
+                        </div>
+                        <span style="font-size:11px;width:35px;text-align:right;">98%</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-label">Tailwind CSS</span>
+                        <div class="win-progress" style="flex:1;" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" aria-label="Tailwind CSS: 100%">
+                            <div class="win-progress-bar" style="width:100%;"></div>
+                        </div>
+                        <span style="font-size:11px;width:35px;text-align:right;">100%</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-label">JavaScript / TypeScript</span>
+                        <div class="win-progress" style="flex:1;" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript / TypeScript: 92%">
+                            <div class="win-progress-bar" style="width:92%;"></div>
+                        </div>
+                        <span style="font-size:11px;width:35px;text-align:right;">92%</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-label">Python / AI</span>
+                        <div class="win-progress" style="flex:1;" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Python / AI: 85%">
+                            <div class="win-progress-bar" style="width:85%;"></div>
+                        </div>
+                        <span style="font-size:11px;width:35px;text-align:right;">85%</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-label">HTML / CSS</span>
+                        <div class="win-progress" style="flex:1;" role="progressbar" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100" aria-label="HTML / CSS: 99%">
+                            <div class="win-progress-bar" style="width:99%;"></div>
+                        </div>
+                        <span style="font-size:11px;width:35px;text-align:right;">99%</span>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-label">Vercel / Deployment</span>
+                        <div class="win-progress" style="flex:1;" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Vercel / Deployment: 95%">
+                            <div class="win-progress-bar" style="width:95%;"></div>
+                        </div>
+                        <span style="font-size:11px;width:35px;text-align:right;">95%</span>
+                    </div>
+                </div>
+
+                <!-- Manifesto panel -->
+                <div id="panel-manifesto" class="win-tab-content" role="tabpanel" aria-labelledby="tab-manifesto">
+                    <div style="font-size:11px;line-height:1.8;padding:4px;">
+                        <p><strong>Studio Manifesto</strong></p>
+                        <p style="margin-top:8px;">We don&apos;t just code. We craft digital experiences that are fast, beautiful, and intelligent.</p>
+                        <p style="margin-top:8px;">Every pixel, every API call, every animation is intentional. From Bamzy-Fx to AnalyzeWithStella — speed, beauty, and intelligence are non-negotiable.</p>
+                        <p style="margin-top:8px;">Built as a single-file HTML masterpiece to prove that one developer with vision can deliver production-level quality.</p>
+                        <p style="margin-top:8px;color:#000080;"><strong>"Ideas without execution are just dreams. We ship."</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="win-status-bar">
+            <div class="win-status-pane" style="flex:1;">Profile loaded</div>
+            <div class="win-status-pane">Nigeria</div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICES WINDOW ==================== -->
+    <section id="services" class="win-window" style="max-width:900px;" aria-labelledby="services-title">
+        <div class="win-titlebar">
+            <div class="title-icon" aria-hidden="true">⚙️</div>
+            <span class="title-text" id="services-title">Services — What I Build</span>
+            <div class="win-titlebar-btns">
+                <button class="win-ctrl-btn" aria-label="Minimize">_</button>
+                <button class="win-ctrl-btn" aria-label="Maximize">□</button>
+                <button class="win-ctrl-btn win-close-btn" aria-label="Close">✕</button>
+            </div>
+        </div>
+        <div class="win-content" style="background:var(--win-face);">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:8px;">
+
+                <!-- Service 1 -->
+                <div style="background:white;border-top:2px solid var(--win-shadow);border-left:2px solid var(--win-shadow);border-right:2px solid white;border-bottom:2px solid white;padding:10px;">
+                    <div style="display:flex;align-items:center;gap:6px;border-bottom:1px solid #ddd;padding-bottom:6px;margin-bottom:8px;">
+                        <i class="fa-solid fa-globe" style="font-size:20px;color:#000080;" aria-hidden="true"></i>
+                        <strong style="font-size:12px;">Web Development</strong>
+                    </div>
+                    <p style="font-size:11px;line-height:1.6;">Blazing-fast, responsive, SEO-optimized websites and apps.</p>
+                    <ul style="font-size:11px;margin-top:8px;padding-left:16px;line-height:1.8;">
+                        <li>Next.js + Tailwind CSS</li>
+                        <li>Performance scores: 100</li>
+                        <li>Mobile-first design</li>
+                        <li>SEO optimized</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div style="background:white;border-top:2px solid var(--win-shadow);border-left:2px solid var(--win-shadow);border-right:2px solid white;border-bottom:2px solid white;padding:10px;">
+                    <div style="display:flex;align-items:center;gap:6px;border-bottom:1px solid #ddd;padding-bottom:6px;margin-bottom:8px;">
+                        <i class="fa-solid fa-robot" style="font-size:20px;color:#880088;" aria-hidden="true"></i>
+                        <strong style="font-size:12px;">AI Tools &amp; Automation</strong>
+                    </div>
+                    <p style="font-size:11px;line-height:1.6;">Intelligent assistants, data analyzers, image generators.</p>
+                    <ul style="font-size:11px;margin-top:8px;padding-left:16px;line-height:1.8;">
+                        <li>Chatbots &amp; assistants</li>
+                        <li>Data analysis tools</li>
+                        <li>AI image generation</li>
+                        <li>Automation scripts</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div style="background:white;border-top:2px solid var(--win-shadow);border-left:2px solid var(--win-shadow);border-right:2px solid white;border-bottom:2px solid white;padding:10px;">
+                    <div style="display:flex;align-items:center;gap:6px;border-bottom:1px solid #ddd;padding-bottom:6px;margin-bottom:8px;">
+                        <i class="fa-solid fa-laptop-code" style="font-size:20px;color:#008800;" aria-hidden="true"></i>
+                        <strong style="font-size:12px;">Custom Apps</strong>
+                    </div>
+                    <p style="font-size:11px;line-height:1.6;">Forex, food delivery, faith platforms, pizza customizers.</p>
+                    <ul style="font-size:11px;margin-top:8px;padding-left:16px;line-height:1.8;">
+                        <li>Dashboard UIs</li>
+                        <li>E-commerce stores</li>
+                        <li>SaaS platforms</li>
+                        <li>Landing pages</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Pricing note -->
+            <div style="margin-top:10px;padding:8px;background:#fffdc0;border:1px solid #8a7200;font-size:11px;">
+                <strong>ℹ️ Note:</strong> All services are affordable and tailored to your budget. Contact me to discuss your project.
+            </div>
+        </div>
+        <div class="win-status-bar">
+            <div class="win-status-pane" style="flex:1;">3 services available</div>
+            <div class="win-status-pane">Affordable pricing</div>
+        </div>
+    </section>
+
+    <!-- ==================== PROJECTS WINDOW ==================== -->
+    <section id="projects" class="win-window" style="max-width:900px;" aria-labelledby="projects-title">
+        <div class="win-titlebar">
+            <div class="title-icon" aria-hidden="true">📁</div>
+            <span class="title-text" id="projects-title">My Projects — GitHub Repositories (Live)</span>
+            <div class="win-titlebar-btns">
+                <button class="win-ctrl-btn" aria-label="Minimize">_</button>
+                <button class="win-ctrl-btn" aria-label="Maximize">□</button>
+                <button class="win-ctrl-btn win-close-btn" aria-label="Close">✕</button>
+            </div>
+        </div>
+
+        <div class="win-toolbar" role="toolbar" aria-label="Projects toolbar">
+            <!-- Search -->
+            <label for="project-search" style="font-size:11px;white-space:nowrap;">Search:</label>
+            <input id="project-search"
+                   class="win-input"
+                   type="text"
+                   placeholder="Type to filter projects..."
+                   style="width:200px;height:22px;padding:2px 6px;"
+                   oninput="filterProjects()"
+                   aria-label="Search projects" />
+            <button class="win-toolbar-btn" onclick="filterProjects()" aria-label="Search">
+                <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i> Find
+            </button>
+            <div style="width:1px;height:22px;background:var(--win-shadow);margin:0 4px;" aria-hidden="true"></div>
+            <button class="win-toolbar-btn" onclick="fetchLiveRepos()" aria-label="Refresh from GitHub">
+                <i class="fa-solid fa-rotate-right" aria-hidden="true"></i> Refresh
+            </button>
+            <div style="margin-left:auto;font-size:10px;color:#555;" aria-live="polite" id="repo-count-display"></div>
+        </div>
+
+        <div class="win-content" style="background:var(--win-face);padding:6px;">
+            <!-- Column headers (Windows Explorer style) -->
+            <div style="overflow:auto;max-height:380px;" role="region" aria-label="Projects list" tabindex="0">
+                <table class="win-list" role="grid" aria-label="Projects">
+                    <thead>
+                        <tr>
+                            <th scope="col" style="width:160px;">Name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col" style="width:70px;">Language</th>
+                            <th scope="col" style="width:50px;">Stars</th>
+                            <th scope="col" style="width:80px;">Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="projects-container">
+                        <!-- JS populated -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Loading indicator -->
+            <div id="projects-loading" style="display:none;text-align:center;padding:12px;font-size:11px;" aria-live="polite">
+                <div class="loading-dots">Fetching repos from Flexi-spec<span>.</span><span>.</span><span>.</span></div>
+            </div>
+        </div>
+        <div class="win-status-bar">
+            <div class="win-status-pane" style="flex:1;" id="projects-status">Loading projects...</div>
+            <div class="win-status-pane">Flexi-spec @ GitHub</div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT WINDOW ==================== -->
+    <section id="contact" class="win-window" style="max-width:560px;" aria-labelledby="contact-title">
+        <div class="win-titlebar">
+            <div class="title-icon" aria-hidden="true">✉️</div>
+            <span class="title-text" id="contact-title">New Message — Contact Flexi Dev Studio</span>
+            <div class="win-titlebar-btns">
+                <button class="win-ctrl-btn" aria-label="Minimize">_</button>
+                <button class="win-ctrl-btn" aria-label="Maximize">□</button>
+                <button class="win-ctrl-btn win-close-btn" aria-label="Close">✕</button>
+            </div>
+        </div>
+
+        <!-- Outlook-style toolbar -->
+        <div class="win-toolbar" role="toolbar" aria-label="Email compose toolbar">
+            <button class="win-toolbar-btn win-btn-default" onclick="document.getElementById('contact-form').requestSubmit()" aria-label="Send">
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Send
+            </button>
+            <button class="win-toolbar-btn" onclick="document.getElementById('contact-form').reset()" aria-label="Clear form">
+                <i class="fa-solid fa-xmark" aria-hidden="true"></i> Clear
+            </button>
+            <div style="width:1px;height:22px;background:var(--win-shadow);margin:0 4px;" aria-hidden="true"></div>
+            <button class="win-toolbar-btn" aria-label="Attach file" title="Attach file (not supported)">
+                <i class="fa-solid fa-paperclip" aria-hidden="true"></i> Attach
+            </button>
+            <button class="win-toolbar-btn" aria-label="Priority" title="Set priority">
+                <i class="fa-solid fa-flag" style="color:red;" aria-hidden="true"></i> Priority
+            </button>
+        </div>
+
+        <div style="background:var(--win-face);padding:4px 8px;font-size:11px;border-bottom:1px solid var(--win-shadow);">
+            <strong>To:</strong> studio@flexidevstudio.com
+        </div>
+
+        <div class="win-content" style="background:white;">
+            <form id="contact-form" onsubmit="handleContact(event)" novalidate>
+                <!-- From field -->
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;padding-bottom:6px;border-bottom:1px solid #eee;">
+                    <label for="contact-name" style="font-size:11px;width:40px;flex-shrink:0;">From:</label>
+                    <input type="text" id="contact-name" class="win-input" placeholder="Your name" required aria-required="true" aria-label="Your name" />
+                </div>
+
+                <!-- Subject/Email -->
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;padding-bottom:6px;border-bottom:1px solid #eee;">
+                    <label for="contact-email" style="font-size:11px;width:40px;flex-shrink:0;">Email:</label>
+                    <input type="email" id="contact-email" class="win-input" placeholder="your@email.com" required aria-required="true" aria-label="Your email address" />
+                </div>
+
+                <!-- Subject line -->
+                <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;padding-bottom:6px;border-bottom:1px solid #eee;">
+                    <label for="contact-subject" style="font-size:11px;width:40px;flex-shrink:0;">Subj:</label>
+                    <input type="text" id="contact-subject" class="win-input" placeholder="Project inquiry..." aria-label="Subject" />
+                </div>
+
+                <!-- Message body -->
+                <textarea id="contact-message" class="win-input" rows="7" placeholder="Tell me about your idea..." required aria-required="true" aria-label="Your message" style="margin-top:4px;"></textarea>
+
+                <!-- Send button row -->
+                <div style="display:flex;gap:6px;margin-top:10px;align-items:center;">
+                    <button type="submit" id="contact-submit-btn" class="win-btn win-btn-default" aria-label="Send message">
+                        <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Send Message
+                    </button>
+                    <button type="reset" class="win-btn" aria-label="Reset form">Cancel</button>
+                    <span id="contact-status" style="font-size:11px;color:green;margin-left:8px;" aria-live="polite"></span>
+                </div>
+            </form>
+        </div>
+        <div class="win-status-bar">
+            <div class="win-status-pane" style="flex:1;">Ready to compose</div>
+            <div class="win-status-pane">Flexi Dev Studio</div>
+        </div>
+    </section>
+
+</main>
+
+<!-- ==================== PROJECT MODAL ==================== -->
+<div id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" onclick="if(event.target.id==='project-modal') closeProjectModal()">
+    <div id="modal-window">
+        <div class="win-titlebar">
+            <div class="title-icon" aria-hidden="true">📄</div>
+            <span class="title-text" id="modal-title">Project Details</span>
+            <div class="win-titlebar-btns">
+                <button class="win-ctrl-btn" aria-label="Minimize">_</button>
+                <button class="win-ctrl-btn" aria-label="Maximize">□</button>
+                <button class="win-ctrl-btn win-close-btn" onclick="closeProjectModal()" aria-label="Close">✕</button>
+            </div>
+        </div>
+        <div id="modal-inner"></div>
+        <div style="display:flex;justify-content:flex-end;gap:6px;padding:8px;background:var(--win-face);border-top:1px solid var(--win-shadow);">
+            <button class="win-btn" onclick="closeProjectModal()" aria-label="Close dialog">Close</button>
+        </div>
+    </div>
+</div>
+
+<!-- ==================== FOOTER ==================== -->
+<footer style="background:var(--win-face);border-top:2px solid var(--win-highlight);padding:6px 16px;font-size:10px;color:#555;display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between;max-width:1180px;margin:0 auto 8px;">
+    <span>Flexi Dev Studio &copy; 2026 — All rights reserved</span>
+    <span>Made as a single-file portfolio &bull; Fetches real GitHub data live</span>
+    <a href="https://github.com/Flexi-spec" target="_blank" rel="noopener noreferrer" aria-label="Flexi-spec on GitHub">
+        <i class="fa-brands fa-github" aria-hidden="true"></i> @Flexi-spec
+    </a>
+</footer>
+
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+// ============================================================
+// WINDOWS 2000 PORTFOLIO — JAVASCRIPT ENGINE
+// ============================================================
+
+// Taskbar clock
+function updateClock() {
+    const now = new Date();
+    let h = now.getHours(), m = now.getMinutes();
+    const ampm = h >= 12 ? 'PM' : 'AM';
+    h = h % 12 || 12;
+    const ms = m < 10 ? '0' + m : m;
+    document.getElementById('taskbar-clock').textContent = h + ':' + ms + ' ' + ampm;
+}
+setInterval(updateClock, 1000);
+updateClock();
+
+// Start menu toggle
+function toggleStartMenu() {
+    const sm = document.getElementById('start-menu');
+    sm.style.display = sm.style.display === 'none' ? 'block' : 'none';
+}
+document.addEventListener('click', function(e) {
+    const sm = document.getElementById('start-menu');
+    const sb = document.getElementById('start-btn');
+    if (!sm.contains(e.target) && !sb.contains(e.target)) {
+        sm.style.display = 'none';
     }
-</div>
-                    <div class="mt-10 text-center text-white/60">
-    Built with ${repo.language}
-</div>
-                </div>
-                <div class="text-xs text-white/40 italic">This modal is powered by live GitHub data fetched directly in the browser.</div>
-            `;
-            
-            modal.style.display = 'flex';
+});
+
+// Smooth scroll
+function smoothScrollTo(id) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    document.getElementById('start-menu').style.display = 'none';
+}
+
+// Tab switching (About section)
+function switchTab(name) {
+    ['about','skills','manifesto'].forEach(t => {
+        document.getElementById('tab-' + t).classList.remove('active');
+        document.getElementById('tab-' + t).setAttribute('aria-selected', 'false');
+        document.getElementById('panel-' + t).classList.remove('active');
+    });
+    document.getElementById('tab-' + name).classList.add('active');
+    document.getElementById('tab-' + name).setAttribute('aria-selected', 'true');
+    document.getElementById('panel-' + name).classList.add('active');
+}
+
+// ============================================================
+// REPO DATA
+// ============================================================
+let allRepos = [
+    { name: "Bamzy-Fx",           description: "Real-time currency exchange rates and forex news for traders.",          html_url: "https://github.com/Flexi-spec/Bamzy-Fx",            homepage: null,                                language: "HTML",       stargazers_count: 0 },
+    { name: "AnalyzeWithStella",   description: "AI-powered data analysis assistant with beautiful UI.",                 html_url: "https://github.com/Flexi-spec/AnalyzeWithStella",   homepage: "https://analyzewithstella.vercel.app", language: "HTML",       stargazers_count: 0 },
+    { name: "Georld",              description: "Modern geography and world exploration platform.",                      html_url: "https://github.com/Flexi-spec/Georld",              homepage: "https://georld.vercel.app",           language: "HTML",       stargazers_count: 0 },
+    { name: "Shotbymho",           description: "Professional photography portfolio.",                                   html_url: "https://github.com/Flexi-spec/Shotbymho",           homepage: "https://shotbymho.vercel.app",        language: "HTML",       stargazers_count: 0 },
+    { name: "SpeedNet",            description: "High-speed internet monitoring and speed test dashboard.",              html_url: "https://github.com/Flexi-spec/SpeedNet",            homepage: "https://speed-net-one.vercel.app",   language: "HTML",       stargazers_count: 0 },
+    { name: "FlexGlance-",         description: "Dashboard and glance UI kit.",                                         html_url: "https://github.com/Flexi-spec/FlexGlance-",         homepage: "https://flexglance.vercel.app",       language: "HTML",       stargazers_count: 0 },
+    { name: "Luxe-Bites-AI",       description: "AI-powered food delivery and restaurant recommendation system.",       html_url: "https://github.com/Flexi-spec/Luxe-Bites-AI",      homepage: null,                                language: "HTML",       stargazers_count: 0 },
+    { name: "Custom-Pizza-App",    description: "Interactive pizza customizer with real-time pricing.",                  html_url: "https://github.com/Flexi-spec/Custom-Pizza-App",   homepage: null,                                language: "HTML",       stargazers_count: 0 },
+    { name: "Flexish",             description: "Modern creative agency landing page.",                                  html_url: "https://github.com/Flexi-spec/Flexish",            homepage: "https://flexish.vercel.app",          language: "HTML",       stargazers_count: 0 },
+    { name: "Techney",             description: "Tech news and gadget showcase platform.",                               html_url: "https://github.com/Flexi-spec/Techney",            homepage: "https://techney.vercel.app",          language: "HTML",       stargazers_count: 0 },
+    { name: "XenonLink",           description: "High-performance link shortener and analytics tool.",                   html_url: "https://github.com/Flexi-spec/XenonLink",          homepage: "https://xenon-link.vercel.app",       language: "HTML",       stargazers_count: 0 },
+    { name: "Neon-AI-Gallery",     description: "AI generated art showcase with neon aesthetics.",                      html_url: "https://github.com/Flexi-spec/Neon-AI-Gallery",    homepage: "https://culinexis.vercel.app",         language: "HTML",       stargazers_count: 0 },
+    { name: "Hearts-Set-Apart-",   description: "Faith-based web experience.",                                          html_url: "https://github.com/Flexi-spec/Hearts-Set-Apart-",  homepage: null,                                language: "HTML",       stargazers_count: 1 },
+    { name: "PortfolioGenerator",  description: "Dynamic portfolio generator tool.",                                     html_url: "https://github.com/Flexi-spec/PortfolioGenerator", homepage: null,                                language: "HTML",       stargazers_count: 0 },
+    { name: "Pretol",              description: "Petrol price tracking app.",                                            html_url: "https://github.com/Flexi-spec/Pretol",             homepage: null,                                language: "HTML",       stargazers_count: 0 },
+    { name: "Zync",                description: "Real-time sync application.",                                           html_url: "https://github.com/Flexi-spec/Zync",               homepage: null,                                language: "HTML",       stargazers_count: 0 },
+];
+
+// Live GitHub fetch
+async function fetchLiveRepos() {
+    const loading = document.getElementById('projects-loading');
+    loading.style.display = 'block';
+    document.getElementById('projects-status').textContent = 'Connecting to GitHub...';
+
+    try {
+        const response = await fetch('https://api.github.com/users/Flexi-spec/repos?per_page=100', {
+            headers: { 'Accept': 'application/vnd.github.v3+json' }
+        });
+        if (response.ok) {
+            const liveData = await response.json();
+            allRepos = liveData.map(repo => ({
+                name: repo.name,
+                description: repo.description || 'No description provided.',
+                html_url: repo.html_url,
+                homepage: repo.homepage || null,
+                language: repo.language || '—',
+                stargazers_count: repo.stargazers_count || 0
+            }));
+            document.getElementById('stat-repos').textContent = allRepos.length;
+            const totalStars = allRepos.reduce((s,r) => s + r.stargazers_count, 0);
+            document.getElementById('stat-stars').textContent = totalStars;
         }
-        
-        function closeProjectModal() {
-            const modal = document.getElementById('project-modal');
-            modal.style.display = 'none';
-        }
-        
-        // Contact form handler with cinematic success
-        function handleContact(e) {
-            e.preventDefault();
-            const btn = e.target.querySelector('button');
-            const original = btn.innerHTML;
-            
-            btn.innerHTML = 'SENDING... <i class="fa-solid fa-spinner fa-spin"></i>';
-            btn.disabled = true;
-            
-            setTimeout(() => {
-                btn.innerHTML = '✅ SENT! THANK YOU';
-                btn.style.background = 'linear-gradient(to right, #22c55e, #86efac)';
-                
-                setTimeout(() => {
-                    e.target.reset();
-                    btn.innerHTML = original;
-                    btn.disabled = false;
-                    btn.style.background = '';
-                }, 2800);
-            }, 1650);
-        }
-        
-        // Particle system for hero - 500+ lines worth of detailed code
-        function createHeroParticles() {
-            const canvas = document.getElementById('hero-canvas');
-            if (!canvas) return;
-            const ctx = canvas.getContext('2d');
-            
-            function resizeCanvas() {
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
-            }
-            resizeCanvas();
-            window.addEventListener('resize', resizeCanvas);
-            
-            let particlesArray = [];
-            
-            class Particle {
-                constructor() {
-                    this.x = Math.random() * canvas.width;
-                    this.y = Math.random() * canvas.height;
-                    this.size = Math.random() * 4 + 1;
-                    this.speedX = Math.random() * 1.5 - 0.75;
-                    this.speedY = Math.random() * 1.5 - 0.75;
-                    this.color = Math.random() > 0.5 ? '#00f5ff' : '#ff00aa';
-                }
-                update() {
-                    this.x += this.speedX;
-                    this.y += this.speedY;
-                    if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-                    if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-                }
-                draw() {
-                    ctx.fillStyle = this.color;
-                    ctx.globalAlpha = 0.7;
-                    ctx.beginPath();
-                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-                    ctx.fill();
-                }
-            }
-            
-            function initParticles(count) {
-                particlesArray = [];
-                for (let i = 0; i < count; i++) {
-                    particlesArray.push(new Particle());
-                }
-            }
-            
-            function animateParticles() {
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
-                for (let i = 0; i < particlesArray.length; i++) {
-                    particlesArray[i].update();
-                    particlesArray[i].draw();
-                }
-                requestAnimationFrame(animateParticles);
-            }
-            
-            initParticles(180);
-            animateParticles();
-            
-            // Extra interactive mouse trail
-            let mouseX = 0, mouseY = 0;
-            window.addEventListener('mousemove', (e) => {
-                mouseX = e.x;
-                mouseY = e.y;
-                // Occasionally spawn extra particles near cursor
-                if (Math.random() > 0.8) {
-                    const p = new Particle();
-                    p.x = mouseX;
-                    p.y = mouseY;
-                    particlesArray.push(p);
-                    if (particlesArray.length > 220) particlesArray.shift();
-                }
-            });
-        }
-        
-        // Animated counters for stats
-        function animateLiveStats() {
-            const reposEl = document.getElementById('live-repos');
-            const starsEl = document.getElementById('live-stars');
-            
-            let countRepos = 0;
-            const targetRepos = allRepos.length || 42;
-            
-            const interval = setInterval(() => {
-                countRepos += Math.ceil(targetRepos / 25);
-                if (countRepos >= targetRepos) {
-                    countRepos = targetRepos;
-                    clearInterval(interval);
-                }
-                reposEl.textContent = countRepos;
-            }, 42);
-            
-            // Stars total (fake sum from real data)
-            let totalStars = allRepos.reduce((sum, r) => sum + (r.stargazers_count || 0), 0) || 8;
-            let countStars = 0;
-            const starsInterval = setInterval(() => {
-                countStars += Math.ceil(totalStars / 18);
-                if (countStars >= totalStars) {
-                    countStars = totalStars;
-                    clearInterval(starsInterval);
-                }
-                starsEl.textContent = countStars;
-            }, 35);
-        }
-        
-        // Typing effect in hero
-        function heroTypingEffect() {
-            const phrases = [
-                "Full Stack • AI Builder",
-                "Creative Coder • Neon Dreamer",
-                "Turning Ideas Into Reality"
-            ];
-            let i = 0;
-            const el = document.getElementById('hero-typing');
-            
-            setInterval(() => {
-                i = (i + 1) % phrases.length;
-                el.style.opacity = 0;
-                setTimeout(() => {
-                    el.innerHTML = `<span>${phrases[i]}</span>`;
-                    el.style.opacity = 1;
-                }, 400);
-            }, 3200);
-        }
-        
-        // Main initialization - everything starts here
-        function initializePortfolio() {
-            console.log('%c🚀 Flexi Dev Studio single-file cinematic portfolio initialized', 'background:#ff00aa;color:#fff;padding:2px 6px;border-radius:4px;font-size:13px');
-            
-            initTailwind();
-            initializeAOS();
-            createHeroParticles();
-            fetchLiveRepos();           // Live GitHub fetch
-            animateLiveStats();
-            heroTypingEffect();
-            
-            // Keyboard accessibility
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') {
-                    const modal = document.getElementById('project-modal');
-                    if (modal.style.display === 'flex') closeProjectModal();
-                }
-            });
-            
-            console.log('%c✅ All systems cinematic and ready.', 'color:#00f5ff');
-        }
-        
-        // Boot the entire site
-        window.onload = initializePortfolio;
-      allRepos = allRepos.filter(repo => repo.homepage);
-    </script>
+    } catch(e) {
+        document.getElementById('projects-status').textContent = 'Offline — showing cached data';
+    }
+
+    loading.style.display = 'none';
+    renderProjects(allRepos);
+}
+
+// Render project rows in Windows Explorer table
+function renderProjects(repos) {
+    const tbody = document.getElementById('projects-container');
+    tbody.innerHTML = '';
+
+    if (repos.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="5" style="text-align:center;padding:16px;color:#555;">No matching projects found.</td></tr>';
+        document.getElementById('projects-status').textContent = '0 objects';
+        document.getElementById('repo-count-display').textContent = '';
+        return;
+    }
+
+    repos.forEach(repo => {
+        const tr = document.createElement('tr');
+        tr.style.cursor = 'pointer';
+        tr.setAttribute('tabindex', '0');
+        tr.setAttribute('role', 'row');
+        tr.setAttribute('aria-label', repo.name + ': ' + repo.description);
+        tr.onclick = () => openProjectModal(repo.name);
+        tr.onkeydown = (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openProjectModal(repo.name); } };
+
+        const iconHtml = `<i class="fa-solid fa-file-code" style="color:#000080;margin-right:4px;" aria-hidden="true"></i>`;
+        const liveLink = repo.homepage
+            ? `<a href="${repo.homepage}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" style="color:#000080;font-size:10px;" aria-label="Open ${repo.name} live demo">Live ↗</a>`
+            : '<span style="color:#aaa;font-size:10px;">—</span>';
+
+        tr.innerHTML = `
+            <td style="white-space:nowrap;">${iconHtml}<strong>${escHtml(repo.name)}</strong></td>
+            <td style="font-size:10px;color:#333;">${escHtml(repo.description)}</td>
+            <td style="font-size:10px;text-align:center;">${escHtml(repo.language)}</td>
+            <td style="font-size:10px;text-align:center;">★ ${repo.stargazers_count}</td>
+            <td style="font-size:10px;">${liveLink}</td>
+        `;
+        tbody.appendChild(tr);
+    });
+
+    const cnt = repos.length;
+    document.getElementById('projects-status').textContent = cnt + ' object' + (cnt !== 1 ? 's' : '');
+    document.getElementById('repo-count-display').textContent = cnt + ' repo' + (cnt !== 1 ? 's' : '');
+}
+
+// Filter
+function filterProjects() {
+    const q = (document.getElementById('project-search').value || '').toLowerCase().trim();
+    const filtered = allRepos.filter(r =>
+        r.name.toLowerCase().includes(q) ||
+        (r.description && r.description.toLowerCase().includes(q))
+    );
+    renderProjects(filtered);
+}
+
+// HTML escape
+function escHtml(str) {
+    return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// Open modal (Windows dialog style)
+function openProjectModal(repoName) {
+    const repo = allRepos.find(r => r.name === repoName);
+    if (!repo) return;
+
+    document.getElementById('modal-title').textContent = 'Properties — ' + repo.name;
+
+    const liveSection = repo.homepage
+        ? `<p style="margin-top:8px;"><a href="${escHtml(repo.homepage)}" target="_blank" rel="noopener noreferrer" class="win-btn" style="display:inline-flex;" aria-label="Open live demo for ${escHtml(repo.name)}"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>&nbsp; View Live Demo</a></p>`
+        : `<p style="margin-top:8px;color:#888;font-size:11px;font-style:italic;">No live demo available.</p>`;
+
+    document.getElementById('modal-inner').innerHTML = `
+        <div style="display:flex;gap:10px;align-items:flex-start;margin-bottom:10px;">
+            <div style="width:36px;height:36px;background:linear-gradient(to right,#000080,#1084d0);display:flex;align-items:center;justify-content:center;color:white;font-size:18px;flex-shrink:0;" aria-hidden="true">
+                <i class="fa-solid fa-folder-open"></i>
+            </div>
+            <div>
+                <strong style="font-size:13px;">${escHtml(repo.name)}</strong><br>
+                <span style="font-size:10px;color:#555;">GitHub Repository</span>
+            </div>
+        </div>
+        <hr style="border-color:var(--win-shadow);margin-bottom:8px;">
+        <table style="width:100%;font-size:11px;border-collapse:collapse;">
+            <tr><td style="width:110px;padding:3px 0;color:#555;">Name:</td><td style="padding:3px 0;"><strong>${escHtml(repo.name)}</strong></td></tr>
+            <tr><td style="padding:3px 0;color:#555;">Description:</td><td style="padding:3px 0;">${escHtml(repo.description)}</td></tr>
+            <tr><td style="padding:3px 0;color:#555;">Language:</td><td style="padding:3px 0;">${escHtml(repo.language)}</td></tr>
+            <tr><td style="padding:3px 0;color:#555;">Stars:</td><td style="padding:3px 0;">★ ${repo.stargazers_count}</td></tr>
+            <tr><td style="padding:3px 0;color:#555;">Source:</td><td style="padding:3px 0;"><a href="${escHtml(repo.html_url)}" target="_blank" rel="noopener noreferrer" aria-label="View ${escHtml(repo.name)} on GitHub">${escHtml(repo.html_url)}</a></td></tr>
+        </table>
+        ${liveSection}
+    `;
+
+    const modal = document.getElementById('project-modal');
+    modal.classList.add('show');
+    document.getElementById('modal-window').querySelector('.win-close-btn').focus();
+}
+
+function closeProjectModal() {
+    document.getElementById('project-modal').classList.remove('show');
+}
+
+// ESC to close modal
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeProjectModal();
+});
+
+// Contact form
+function handleContact(e) {
+    e.preventDefault();
+    const btn = document.getElementById('contact-submit-btn');
+    const status = document.getElementById('contact-status');
+
+    btn.disabled = true;
+    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin" aria-hidden="true"></i> Sending...';
+    status.textContent = '';
+
+    setTimeout(() => {
+        btn.innerHTML = '<i class="fa-solid fa-check" aria-hidden="true"></i> Sent!';
+        status.textContent = '✅ Message sent successfully!';
+        status.style.color = 'green';
+
+        setTimeout(() => {
+            e.target.reset();
+            btn.innerHTML = '<i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Send Message';
+            btn.disabled = false;
+            status.textContent = '';
+        }, 3000);
+    }, 1600);
+}
+
+// Hero typing effect
+function heroTypingEffect() {
+    const phrases = [
+        'Full Stack • AI Builder • Creative Coder',
+        'Next.js • Tailwind • Python • Vercel',
+        'Turning Ideas Into Digital Reality'
+    ];
+    let i = 0;
+    const el = document.getElementById('hero-typing');
+    setInterval(() => {
+        i = (i + 1) % phrases.length;
+        el.style.opacity = 0;
+        setTimeout(() => {
+            el.textContent = phrases[i];
+            el.style.opacity = 1;
+        }, 300);
+    }, 3000);
+}
+
+// Init
+window.onload = function() {
+    heroTypingEffect();
+    fetchLiveRepos();
+};
+</script>
 </body>
 </html>
